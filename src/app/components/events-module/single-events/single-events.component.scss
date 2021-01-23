@@ -1,0 +1,123 @@
+.event-body {
+    margin-top: 150px;
+}
+
+.event-head h1 {
+    margin-bottom: 12px;
+}
+
+.event-head p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 80%;
+    margin-bottom: 0;
+}
+
+.event-head button {
+    background: linear-gradient(45deg,#ff00de,#ff0078);
+    border: 0;
+    border-radius: 10em;
+    padding: 8px 25px 10px 25px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.4s;
+    box-shadow: 0 4px 17px 3px rgba(72,31,210,.1);
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+.event-head a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.event-head button:hover {
+    box-shadow: 0 4px 17px 3px rgba(72,31,210,.3);
+}
+.event-head img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    transition: all .2s;
+}
+
+.event-head img:hover {
+    opacity: 0.9;
+}
+
+.img-san {
+    background: linear-gradient(90deg,#9376f7,#4015d0);
+    color: #FFF;
+    border-radius: 30px;
+    padding: 5px 20px 9px;
+    font-size: 14px;
+    position: absolute;
+    left: 5%;
+    top: 85%;
+    cursor: pointer;
+    font-family: Helvetica-ARlight;
+}
+
+@media (max-width: 576px) { 
+    .img-san {
+        top: 80%;
+        left: 8%;
+    }
+}
+
+.event-speakers {
+    margin-top: calc(2.67857vw + 51.42857px);
+    text-align: center;
+}
+
+.event-speakers h2 {
+    margin-bottom: 20px;
+    
+}
+
+.event-speakers img {
+    width: 50%;
+    height: auto;
+    border-radius: 50%;
+    transition: all .2s;
+}
+
+.event-speakers img:hover {
+    opacity: 0.9;
+}
+
+.event-speakers p {
+    font-family: Helvetica-ARlight;
+}
+.start-now {
+    margin-top: calc(1.78571vw + 34.28571px)!important;
+}
+
+.start-now-bg {
+    background-image: url(./../../../../assets/imgs/cta@2x.jpg);
+    background-position: 50%;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 80px 0;
+}
+.start-now button {
+    background: linear-gradient(90deg,#ede020,#ffba00);
+    border: 0;
+    color: #fff;
+    border-radius: 10em;
+    padding: 8px 25px 10px 25px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.start-now button a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.start-now button:hover {
+    transition: all 0.2s;
+    box-shadow: 0 15px 17px 3px rgba(72,31,210,.1);
+}

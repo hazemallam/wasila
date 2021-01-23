@@ -1,0 +1,113 @@
+.events-body {
+    margin-top: 80px;
+}
+
+.events-header img {
+    width: 100%;
+    height: auto;
+}
+
+.header, .header-image {
+    padding-left: 0!important;
+    padding-right: 0!important;
+}
+
+.header {
+    background: #f3f9fd;
+    position: relative;
+}
+
+.header button {
+    background: linear-gradient(90deg,#ede020,#ffba00);
+    border: 0;
+    border-radius: 10em;
+    padding: 8px 25px 10px 25px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.4s;
+    box-shadow: 0 4px 17px 3px rgba(72,31,210,.1);
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+.header a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.header button:hover {
+    box-shadow: 0 4px 17px 3px rgba(72,31,210,.3);
+}
+
+.header-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 766px) { 
+    .events-body {
+        margin-top: 280px;
+    }
+
+    .header {
+        margin-bottom: 150px;
+    }
+
+    .row2 {
+        display: none;
+    }
+}
+
+.all-events {
+    margin-top: calc(2.67857vw + 51.42857px);
+}
+
+.all-events h3 {
+    margin-bottom: 20px;
+}
+
+.all-events  a {
+    text-decoration: none;
+    color: #212529;
+}
+.all-events  .card {
+    border: none;
+    cursor: pointer;
+    margin-bottom: 30px;
+    transition: all 0.6s;
+}
+
+.card-img-top {
+    border-radius: 30px !important;
+    transition: all 0.2s;
+}
+
+.card-img-top:hover {
+    opacity: 0.8;
+}
+
+.card-title {
+    transition: all 0.2s;
+}
+
+.card-title:hover {
+    color: #2c63f7;
+}
+
+.start-now {
+    margin-top: calc(1.78571vw + 34.28571px)!important;
+}
+
+.start-now-bg {
+    background-image: url(./../../../../assets/imgs/cta@2x.jpg);
+    background-position: 50%;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 80px 0;
+}
+.st-now2 {
+    background-image: url(./../../../../assets/imgs/cta-blog.jpg);
+}
