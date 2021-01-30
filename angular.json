@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "wasila-angular"
+  "defaultProject": "wasila-angular",
+  "cli": {
+    "analytics": "97ed2068-0a0b-4429-8c25-d4b5faa95bbe"
+  }
 }
