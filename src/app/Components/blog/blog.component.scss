@@ -1,13 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@font-face {
-    src: url(./assets/fonts/HelveticaNeueLTBold.ttf);
-    font-family: Helvetica-ARbold;
-}
 
-@font-face {
-    src: url(./assets/fonts/HelveticaNeueLTArabic.ttf);
-    font-family: Helvetica-ARlight;
-}
 
 * {
     margin: 0;
@@ -550,7 +542,7 @@ body{font-family: Helvetica-ARbold;}
 }
 
 .start-now-bg {
-    background-image: url("assets/imgs/cta@2x.jpg");
+    background-image: url("../../../assets/imgs/cta@2x.jpg");
     background-position: 50%;
     color: #fff;
     background-repeat: no-repeat;
@@ -922,7 +914,7 @@ body{font-family: Helvetica-ARbold;}
 }
 
 .st-now2 {
-    background-image: url("assets/imgs/cta-blog.jpg");
+    background-image: url('../../../assets/imgs/cta-blog.jpg');
 }
 /* End Courses Page */
 

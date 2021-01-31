@@ -11,6 +11,8 @@ import { GraphicDesignComponent } from './components/graphic-design/graphic-desi
 import { ThreedArtComponent } from './components/threed-art/threed-art.component';
 import { AlumniComponent } from './components/alumni/alumni.component';
 import { HomeComponent } from './components/home/home.component';
+import { BlogComponent } from './components/blog/blog.component';
+
 
 const routes: Routes = [
   {path:'events', loadChildren: () => import('./components/events-module/events-module.module').then(m => m.EventsModuleModule)},
@@ -25,9 +27,9 @@ const routes: Routes = [
   {path: '3d-art', component: ThreedArtComponent},
   {path : 'alumni', component: AlumniComponent},
   {path : 'home', component: HomeComponent},
+  {path: 'blog', component: BlogComponent},
 
 ]
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

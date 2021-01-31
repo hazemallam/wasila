@@ -17,6 +17,7 @@ import { GraphicDesignComponent } from './components/graphic-design/graphic-desi
 import { ThreedArtComponent } from './components/threed-art/threed-art.component';
 import { AlumniComponent } from './components/alumni/alumni.component';
 import { HomeComponent } from './components/home/home.component';
+import { BlogComponent } from './components/blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -31,11 +32,13 @@ import { HomeComponent } from './components/home/home.component';
     GraphicDesignComponent,
     ThreedArtComponent,
     AlumniComponent,
-    HomeComponent
+    HomeComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
