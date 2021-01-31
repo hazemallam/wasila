@@ -11,6 +11,8 @@ import { CoursesComponent } from './components/courses/courses.component';
 import { MotionGraphicComponent } from './components/motion-graphic/motion-graphic.component'
 
 import { ConceptArtComponent } from './components/concept-art/concept-art.component';
+import { LoginComponent } from './components/login/login.component';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { ConceptArtComponent } from './components/concept-art/concept-art.compon
     ContactUsComponent,
     CoursesComponent,
     MotionGraphicComponent,
-    ConceptArtComponent
+    ConceptArtComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
