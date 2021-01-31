@@ -10,6 +10,7 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 import { CoursesComponent } from './components/courses/courses.component';
 import { MotionGraphicComponent } from './components/motion-graphic/motion-graphic.component'
 
+import { ConceptArtComponent } from './components/concept-art/concept-art.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MotionGraphicComponent } from './components/motion-graphic/motion-graph
     PrivacyComponent,
     ContactUsComponent,
     CoursesComponent,
-    MotionGraphicComponent
+    MotionGraphicComponent,
+    ConceptArtComponent
   ],
   imports: [
     BrowserModule,
