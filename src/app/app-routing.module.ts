@@ -9,6 +9,7 @@ import { ConceptArtComponent } from './components/concept-art/concept-art.compon
 import { LoginComponent } from './components/login/login.component';
 import { GraphicDesignComponent } from './components/graphic-design/graphic-design.component';
 import { ThreedArtComponent } from './components/threed-art/threed-art.component';
+import { AlumniComponent } from './components/alumni/alumni.component';
 
 const routes: Routes = [
   {path:'events', loadChildren: () => import('./components/events-module/events-module.module').then(m => m.EventsModuleModule)},
@@ -20,7 +21,8 @@ const routes: Routes = [
   {path: 'concept', component: ConceptArtComponent},
   {path: 'login', component: LoginComponent},
   {path: 'graphic', component: GraphicDesignComponent},
-  {path: '3d-art', component: ThreedArtComponent}
+  {path: '3d-art', component: ThreedArtComponent},
+  {path : 'alumni', component: AlumniComponent},
 
 ]
 
