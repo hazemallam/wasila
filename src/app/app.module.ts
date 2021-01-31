@@ -14,6 +14,7 @@ import { ConceptArtComponent } from './components/concept-art/concept-art.compon
 import { LoginComponent } from './components/login/login.component';
 
 import { GraphicDesignComponent } from './components/graphic-design/graphic-design.component';
+import { ThreedArtComponent } from './components/threed-art/threed-art.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { GraphicDesignComponent } from './components/graphic-design/graphic-desi
     MotionGraphicComponent,
     ConceptArtComponent,
     LoginComponent,
-    GraphicDesignComponent
+    GraphicDesignComponent,
+    ThreedArtComponent
   ],
   imports: [
     BrowserModule,
