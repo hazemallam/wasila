@@ -19,6 +19,7 @@ import { AlumniComponent } from './components/alumni/alumni.component';
 import { HomeComponent } from './components/home/home.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { QuestionsComponent } from './components/questions/questions.component';
+import { VideoResourcesComponent } from './components/video-resources/video-resources.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { QuestionsComponent } from './components/questions/questions.component';
     AlumniComponent,
     HomeComponent,
     BlogComponent,
-    QuestionsComponent
+    QuestionsComponent,
+    VideoResourcesComponent
 
   ],
   imports: [

@@ -13,6 +13,7 @@ import { AlumniComponent } from './components/alumni/alumni.component';
 import { HomeComponent } from './components/home/home.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { QuestionsComponent } from './components/questions/questions.component';
+import { VideoResourcesComponent } from './components/video-resources/video-resources.component';
 
 
 const routes: Routes = [
@@ -29,7 +30,8 @@ const routes: Routes = [
   {path : 'alumni', component: AlumniComponent},
   {path : 'home', component: HomeComponent},
   {path: 'blog', component: BlogComponent},
-  {path: 'questions', component: QuestionsComponent}
+  {path: 'questions', component: QuestionsComponent},
+  {path : 'videores', component : VideoResourcesComponent}
 
 ]
 
