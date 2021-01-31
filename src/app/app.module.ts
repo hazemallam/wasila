@@ -13,6 +13,7 @@ import { MotionGraphicComponent } from './components/motion-graphic/motion-graph
 import { ConceptArtComponent } from './components/concept-art/concept-art.component';
 import { LoginComponent } from './components/login/login.component';
 
+import { GraphicDesignComponent } from './components/graphic-design/graphic-design.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { LoginComponent } from './components/login/login.component';
     CoursesComponent,
     MotionGraphicComponent,
     ConceptArtComponent,
-    LoginComponent
+    LoginComponent,
+    GraphicDesignComponent
   ],
   imports: [
     BrowserModule,
