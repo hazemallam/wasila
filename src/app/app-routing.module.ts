@@ -12,6 +12,7 @@ import { ThreedArtComponent } from './components/threed-art/threed-art.component
 import { AlumniComponent } from './components/alumni/alumni.component';
 import { HomeComponent } from './components/home/home.component';
 import { BlogComponent } from './components/blog/blog.component';
+import { QuestionsComponent } from './components/questions/questions.component';
 
 
 const routes: Routes = [
@@ -28,8 +29,10 @@ const routes: Routes = [
   {path : 'alumni', component: AlumniComponent},
   {path : 'home', component: HomeComponent},
   {path: 'blog', component: BlogComponent},
+  {path: 'questions', component: QuestionsComponent}
 
 ]
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

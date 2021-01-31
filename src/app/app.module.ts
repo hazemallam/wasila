@@ -18,6 +18,7 @@ import { ThreedArtComponent } from './components/threed-art/threed-art.component
 import { AlumniComponent } from './components/alumni/alumni.component';
 import { HomeComponent } from './components/home/home.component';
 import { BlogComponent } from './components/blog/blog.component';
+import { QuestionsComponent } from './components/questions/questions.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,9 @@ import { BlogComponent } from './components/blog/blog.component';
     ThreedArtComponent,
     AlumniComponent,
     HomeComponent,
-    BlogComponent
+    BlogComponent,
+    QuestionsComponent
+
   ],
   imports: [
     BrowserModule,
