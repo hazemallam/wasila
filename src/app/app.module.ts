@@ -8,6 +8,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { PrivacyComponent } from './components/privacy/privacy.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { CoursesComponent } from './components/courses/courses.component';
+import { MotionGraphicComponent } from './components/motion-graphic/motion-graphic.component'
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { CoursesComponent } from './components/courses/courses.component';
     RegisterComponent,
     PrivacyComponent,
     ContactUsComponent,
-    CoursesComponent
+    CoursesComponent,
+    MotionGraphicComponent
   ],
   imports: [
     BrowserModule,
