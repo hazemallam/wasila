@@ -7,6 +7,7 @@ import { RegisterComponent } from './components/register/register.component';
 
 import { PrivacyComponent } from './components/privacy/privacy.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { CoursesComponent } from './components/courses/courses.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
     AppComponent,
     RegisterComponent,
     PrivacyComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    CoursesComponent
   ],
   imports: [
     BrowserModule,
