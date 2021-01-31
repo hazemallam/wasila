@@ -20,6 +20,7 @@ import { HomeComponent } from './components/home/home.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { QuestionsComponent } from './components/questions/questions.component';
 import { VideoResourcesComponent } from './components/video-resources/video-resources.component';
+import { SoundResourcesComponent } from './components/sound-resources/sound-resources.component';
 
 @NgModule({
   declarations: [
@@ -37,13 +38,14 @@ import { VideoResourcesComponent } from './components/video-resources/video-reso
     HomeComponent,
     BlogComponent,
     QuestionsComponent,
-    VideoResourcesComponent
+    VideoResourcesComponent,
+    SoundResourcesComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
