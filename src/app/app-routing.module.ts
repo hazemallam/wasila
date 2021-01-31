@@ -10,6 +10,7 @@ import { LoginComponent } from './components/login/login.component';
 import { GraphicDesignComponent } from './components/graphic-design/graphic-design.component';
 import { ThreedArtComponent } from './components/threed-art/threed-art.component';
 import { AlumniComponent } from './components/alumni/alumni.component';
+import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
   {path:'events', loadChildren: () => import('./components/events-module/events-module.module').then(m => m.EventsModuleModule)},
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path: 'graphic', component: GraphicDesignComponent},
   {path: '3d-art', component: ThreedArtComponent},
   {path : 'alumni', component: AlumniComponent},
+  {path : 'home', component: HomeComponent},
 
 ]
 
