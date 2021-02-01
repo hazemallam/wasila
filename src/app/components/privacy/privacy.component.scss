@@ -312,3 +312,16 @@
     padding-top: 20px;
     padding-bottom: 20px;
 }
+
+.page-icon {
+    display: inline-block;
+    transition: all .2s;
+    fill: #fff;
+    vertical-align: middle;
+    line-height: inherit;
+    font-size: 1em;
+}
+
+.page-icon:hover {
+    fill: #444;
+}

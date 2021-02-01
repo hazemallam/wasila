@@ -651,3 +651,16 @@ padding: 16px 0 0;
     font-size: calc(1.78571vw + 34.28571px);
     margin-left: 10px;
 }
+
+.page-icon {
+    display: inline-block;
+    transition: all .2s;
+    fill: #fff;
+    vertical-align: middle;
+    line-height: inherit;
+    font-size: 1em;
+}
+
+.page-icon:hover {
+    fill: #444;
+}
