@@ -4,5 +4,67 @@
             "id":1,
             "name":"Hazem"
         }
+    ],
+    "alumniLists":[
+        {
+            "id":1,
+            "name":"عادل مصطفى",
+            "alumni":"../../../assets/imgs/alumni/1.jpg"
+        },
+        { 
+            "id":2,
+            "name":"مليكة عزالدي",
+            "alumni": "../../../assets/imgs/alumni/2.jpg"
+        },
+        { 
+            "id":3,
+            "name":" محمد احمد",
+            "alumni":"../../../assets/imgs/alumni/4.jpg"
+        },
+        {
+            "id":4,
+            "name":"داليا عبد العزيز ",
+            "alumni": "../../../assets/imgs/alumni/3.jpg"
+        },
+        {
+            "id":5,
+            "name":"عبد الرحمن محمد",
+            "alumni":"../../../assets/imgs/alumni/7.jpg"
+        },
+        {
+            "id":6,
+            "name":"نور محمد",
+            "alumni":"../../../assets/imgs/alumni/5.jpg"
+        },
+        {
+            "id":7,
+            "name":"حازم عثمان",
+            "alumni":"../../../assets/imgs/alumni/6.jpg"
+        },
+        {
+            "id":8,
+            "name":"هشام ماجد",
+            "alumni":"../../../assets/imgs/alumni/8.jpg"
+        },
+        {
+            "id":9,
+            "name":"دينا اسامه",
+            "alumni":"../../../assets/imgs/alumni/9.jpg"
+        },
+        {
+            "id":10,
+            "name":"نادية شحاته",
+            "alumni":"../../../assets/imgs/alumni/10.jpg"
+        },
+        {
+            "id":11,
+            "name":"عبد المنعم ياسر",
+            "alumni":"../../../assets/imgs/alumni/11.jpg"
+        },
+        {
+            "id":12,
+            "name":"ياسمين صلاح",
+            "alumni":"../../../assets/imgs/alumni/12.jpg"
+        }
     ]
 }

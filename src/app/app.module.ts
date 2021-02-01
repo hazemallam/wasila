@@ -22,6 +22,9 @@ import { QuestionsComponent } from './Components/questions/questions.component';
 import { VideoResourcesComponent } from './Components/video-resources/video-resources.component';
 import { SoundResourcesComponent } from './Components/sound-resources/sound-resources.component';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +48,9 @@ import { SoundResourcesComponent } from './Components/sound-resources/sound-reso
   imports: [
     BrowserModule,
     AppRoutingModule,
-  
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
