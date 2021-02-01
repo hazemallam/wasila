@@ -21,6 +21,7 @@ import { BlogComponent } from './Components/blog/blog.component';
 import { QuestionsComponent } from './Components/questions/questions.component';
 import { VideoResourcesComponent } from './Components/video-resources/video-resources.component';
 import { SoundResourcesComponent } from './Components/sound-resources/sound-resources.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { SoundResourcesComponent } from './Components/sound-resources/sound-reso
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule
   
   ],
   providers: [],

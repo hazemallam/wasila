@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, ParamMap } from '@angular/router';
+import { EventServiceService } from 'src/app/Services/Events/event-service.service';
+import { IEvent } from 'src/app/ViewModels/ievent';
 
 @Component({
   selector: 'app-single-events',
@@ -6,8 +9,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./single-events.component.scss']
 })
 export class SingleEventsComponent implements OnInit {
-
-  constructor() { }
+  event:IEvent={ year:'',location:'',date:'',title:'',cover:'',description:'',speakers:[{name:'', cover:'', bio:''}]}
+  constructor(private eventService : EventServiceService, private activatedRoute : ActivatedRoute) { }
 
   ngOnInit(): void {
     const menu = document.querySelector('#mobile-menu');
@@ -17,6 +20,18 @@ export class SingleEventsComponent implements OnInit {
         menu.classList.toggle('is-active');
         menuLinks.classList.toggle('active');
     });
+    this.activatedRoute.paramMap.subscribe((params:ParamMap)=>{
+      let eid:string | null = params.get('id')
+      let eventId = eid? parseInt(eid):0
+      this.eventService.getEvent(eventId).subscribe((response)=>{
+        this.event = response
+        console.log(response)
+      },
+      (error)=>{
+        console.log(error)
+      })
+    })
+
     }
   }
 

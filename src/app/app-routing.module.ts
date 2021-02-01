@@ -34,6 +34,7 @@ const routes: Routes = [
   {path: 'questions', component: QuestionsComponent},
   {path : 'videores', component : VideoResourcesComponent},
   {path : 'soundres', component: SoundResourcesComponent},
+  {path:'', redirectTo:'/home', pathMatch:'full'}
 
 ]
 

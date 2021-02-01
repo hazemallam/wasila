@@ -6,7 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes : Routes = [
   {path: 'allevents', component:EventsComponent},
-  {path: 'singleevent', component:SingleEventsComponent}
+  {path: 'singleevent/:id', component:SingleEventsComponent}
 ]
 
 @NgModule({
@@ -14,6 +14,7 @@ const routes : Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes)
-  ]
+  ],
+  
 })
 export class EventsModuleModule { }
