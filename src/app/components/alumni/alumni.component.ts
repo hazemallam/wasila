@@ -1,11 +1,11 @@
 import { Component, OnInit,  } from '@angular/core';
 import { AlumniModel } from 'src/app/ViewModels/alumni-model';
-import { AlumniService } from 'src/app/services/alumni.service';
+import { AlumniService } from 'src/app/Services/alumni.service';
 import { Subscription } from 'rxjs';
 import { Router } from '@angular/router';
 
 
-import * as $ from 'jquery';
+// import * as $ from 'jquery';
 @Component({
   selector: 'app-alumni',
   templateUrl: './alumni.component.html',

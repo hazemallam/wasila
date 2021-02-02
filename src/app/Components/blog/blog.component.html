@@ -37,39 +37,20 @@
     <div class="container">
         <h1>المدونة</h1>
         <div class="row">
-            <div class="col-lg-6">
-                <a href="article.html">
+            <div class="col-lg-6" *ngFor="let bl of blogs.slice(0,2)">
+                <a href="article.html" >
                     <div class="card" style="width: 100%;">
-                        <img src="../../../assets/imgs/blog/a-11.jpg" class="card-img-top" alt="">
+                        <img src = {{bl.image}} class="card-img-top" alt="">
                         <div class="card-body">
                         <div>
-                            <img src="../../../assets/imgs/alumni/8.jpg" alt="">
-                            <span style="margin-left: 15px;">محمد علي</span>
-                            <span class="text-muted">15 نوفمبر 2020</span>
+                            <img src={{bl.authorimage}} alt="">
+                            <span style="margin-left: 15px;">{{bl.name}}</span>
+                            <span class="text-muted">{{bl.date}}</span>
 
-                            <span class="text-muted" style="float: left;margin-right: 15px;margin-top: 5px;">223 <img src="../../../assets/imgs/heart.png" alt="" style="width: 20px;"></span>
-                            <span class="text-muted" style="float: left;margin-top: 5px;">34  <img src="../../../assets/imgs/comment.png" alt=""  style="width: 20px;"></span>
+                            <span class="text-muted" style="float: left;margin-right: 15px;margin-top: 5px;">{{bl.like}} <img src="../../../assets/imgs/heart.png" alt="" style="width: 20px;"></span>
+                            <span class="text-muted" style="float: left;margin-top: 5px;">{{bl.comment}}  <img src="../../../assets/imgs/comment.png" alt=""  style="width: 20px;"></span>
                         </div>
-                        <p class="card-text">يتطلب تصميم الجرافيك وجود معنى وهدف لتوضيح فكرة ما من خلال الاتصال المرئي . الآن يمكنك بدء التصميم بطريقة فعالة .</p>
-                        </div>
-                    </div>  
-                </a>  
-            </div>
-
-            <div class="col-lg-6">
-                <a href="article.html">
-                    <div class="card" style="width: 100%;">
-                        <img src="../../../assets/imgs/blog/a-15.jpg" class="card-img-top" alt="">
-                        <div class="card-body">
-                        <div>
-                            <img src="../../../assets/imgs/alumni/8.jpg" alt="">
-                            <span style="margin-left: 15px;">محمد علي</span>
-                            <span class="text-muted">15 نوفمبر 2020</span>
-
-                            <span class="text-muted" style="float: left;margin-right: 15px;margin-top: 5px;">223 <img src="../../../assets/imgs/heart.png" alt="" style="width: 20px;"></span>
-                            <span class="text-muted" style="float: left;margin-top: 5px;">34  <img src="../../../assets/imgs/comment.png" alt=""  style="width: 20px;"></span>
-                        </div>
-                        <p class="card-text">يتطلب تصميم الجرافيك وجود معنى وهدف لتوضيح فكرة ما من خلال الاتصال المرئي . الآن يمكنك بدء التصميم بطريقة فعالة .</p>
+                        <p class="card-text">{{bl.text}}</p>
                         </div>
                     </div>  
                 </a>  
@@ -83,161 +64,38 @@
         <div class="row">
             <div class="col-lg-6">
                 <h3>الأكثر قراة</h3>
-                <a href="article.html">
+                <a href="article.html" *ngFor="let blo of blogs">
                     <div class="card" style="width: 82%;">
-                        <img src="../../../assets/imgs/blog/a-15.jpg" class="card-img-top" alt="">
+                        <img src={{blo.image}} class="card-img-top" alt="">
                         <div class="card-body">
                         <div>
-                            <img src="../../../assets/imgs/alumni/8.jpg" alt="">
-                            <span style="margin-left: 15px;">محمد علي</span>
-                            <span class="text-muted">15 نوفمبر 2020</span>
+                            <img src={{blo.authorimage}} alt="">
+                            <span style="margin-left: 15px;">{{blo.name}}</span>
+                            <span class="text-muted">{{blo.date}}</span>
 
-                            <span class="text-muted" style="float: left;margin-right: 15px;margin-top: 5px;">223 <img src="../../../assets/imgs/heart.png" alt="" style="width: 20px;"></span>
-                            <span class="text-muted" style="float: left;margin-top: 5px;">34  <img src="../../../assets/imgs/comment.png" alt=""  style="width: 20px;"></span>
+                            <span class="text-muted" style="float: left;margin-right: 15px;margin-top: 5px;">{{blo.like}} <img src="../../../assets/imgs/heart.png" alt="" style="width: 20px;"></span>
+                            <span class="text-muted" style="float: left;margin-top: 5px;">{{blo.comment}}  <img src="../../../assets/imgs/comment.png" alt=""  style="width: 20px;"></span>
                         </div>
-                        <p class="card-text">يتطلب تصميم الجرافيك وجود معنى وهدف لتوضيح فكرة ما من خلال الاتصال المرئي . الآن يمكنك بدء التصميم بطريقة فعالة .</p>
+                        <p class="card-text">{{blo.text}}</p>
                         </div>
                     </div>  
                 </a>  
-                <a href="article.html">
-                    <div class="card" style="width: 82%;">
-                        <img src="../../../assets/imgs/blog/a-14.jpg" class="card-img-top" alt="">
-                        <div class="card-body">
-                        <div>
-                            <img src="../../../assets/imgs/alumni/8.jpg" alt="">
-                            <span style="margin-left: 15px;">محمد علي</span>
-                            <span class="text-muted">15 نوفمبر 2020</span>
-
-                            <span class="text-muted" style="float: left;margin-right: 15px;margin-top: 5px;">223 <img src="../../../assets/imgs/heart.png" alt="" style="width: 20px;"></span>
-                            <span class="text-muted" style="float: left;margin-top: 5px;">34  <img src="../../../assets/imgs/comment.png" alt=""  style="width: 20px;"></span>
-                        </div>
-                        <p class="card-text">يتطلب تصميم الجرافيك وجود معنى وهدف لتوضيح فكرة ما من خلال الاتصال المرئي . الآن يمكنك بدء التصميم بطريقة فعالة .</p>
-                        </div>
-                    </div>  
-                </a>  
-                <a href="article.html">
-                    <div class="card" style="width: 82%;">
-                        <img src="../../../assets/imgs/blog/a-12.jpg" class="card-img-top" alt="">
-                        <div class="card-body">
-                        <div>
-                            <img src="../../../assets/imgs/alumni/8.jpg" alt="">
-                            <span style="margin-left: 15px;">محمد علي</span>
-                            <span class="text-muted">15 نوفمبر 2020</span>
-
-                            <span class="text-muted" style="float: left;margin-right: 15px;margin-top: 5px;">223 <img src="../../../assets/imgs/heart.png" alt="" style="width: 20px;"></span>
-                            <span class="text-muted" style="float: left;margin-top: 5px;">34  <img src="../../../assets/imgs/comment.png" alt=""  style="width: 20px;"></span>
-                        </div>
-                        <p class="card-text">يتطلب تصميم الجرافيك وجود معنى وهدف لتوضيح فكرة ما من خلال الاتصال المرئي . الآن يمكنك بدء التصميم بطريقة فعالة .</p>
-                        </div>
-                    </div>  
-                </a>  
-                <a href="article.html">
-                    <div class="card" style="width: 82%;">
-                        <img src="../../../assets/imgs/blog/a-13.jpg" class="card-img-top" alt="">
-                        <div class="card-body">
-                        <div>
-                            <img src="../../../assets/imgs/alumni/8.jpg" alt="">
-                            <span style="margin-left: 15px;">محمد علي</span>
-                            <span class="text-muted">15 نوفمبر 2020</span>
-
-                            <span class="text-muted" style="float: left;margin-right: 15px;margin-top: 5px;">223 <img src="../../../assets/imgs/heart.png" alt="" style="width: 20px;"></span>
-                            <span class="text-muted" style="float: left;margin-top: 5px;">34  <img src="../../../assets/imgs/comment.png" alt=""  style="width: 20px;"></span>
-                        </div>
-                        <p class="card-text">يتطلب تصميم الجرافيك وجود معنى وهدف لتوضيح فكرة ما من خلال الاتصال المرئي . الآن يمكنك بدء التصميم بطريقة فعالة .</p>
-                        </div>
-                    </div>  
-                </a>  
-                <a href="article.html">
-                    <div class="card" style="width: 82%;">
-                        <img src="../../../assets/imgs/blog/a-1.jpg" class="card-img-top" alt="">
-                        <div class="card-body">
-                        <div>
-                            <img src="../../../assets/imgs/alumni/8.jpg" alt="">
-                            <span style="margin-left: 15px;">محمد علي</span>
-                            <span class="text-muted">15 نوفمبر 2020</span>
-
-                            <span class="text-muted" style="float: left;margin-right: 15px;margin-top: 5px;">223 <img src="../../../assets/imgs/heart.png" alt="" style="width: 20px;"></span>
-                            <span class="text-muted" style="float: left;margin-top: 5px;">34  <img src="../../../assets/imgs/comment.png" alt=""  style="width: 20px;"></span>
-                        </div>
-                        <p class="card-text">يتطلب تصميم الجرافيك وجود معنى وهدف لتوضيح فكرة ما من خلال الاتصال المرئي . الآن يمكنك بدء التصميم بطريقة فعالة .</p>
-                        </div>
-                    </div>  
-                </a> 
+                  
                 
                 <button><a href="#">المزيد</a></button>
             </div>
             <div class="col-lg-1"></div>
             <div class="col-lg-5">
                 <h3 class="um-1">كورسات مميزة</h3>
-                <div class="side-card">
+                <div class="side-card" *ngFor="let cor of courses">
                     <div class="row">
-                        <img src="../../../assets/imgs/blog/a-6.jpg" alt="" class="col-sm-3 col-md-2 col-lg-3">
+                        <img src={{cor.image}} alt="" class="col-sm-3 col-md-2 col-lg-3">
                         <span>
-                            وضح الصور و اضافة
+                            {{cor.text1}}
                             <br>
-                            تأثيرات صوتية
+                            {{cor.text2}}
                             <br>
-                            <span style="padding: 0px 15px; background-color: black; color:white; font-size: 11px;">12:30</span>
-                        </span>
-                    </div>
-                </div>
-                <div class="side-card">
-                    <div class="row">
-                        <img src="../../../assets/imgs/blog/a-7.jpg" alt="" class="col-sm-3 col-md-2 col-lg-3">
-                        <span>
-                            وضح الصور و اضافة
-                            <br>
-                            تأثيرات صوتية
-                            <br>
-                            <span style="padding: 0px 15px; background-color: black; color:white; font-size: 11px;">12:30</span>
-                        </span>
-                    </div>
-                </div>
-                <div class="side-card">
-                    <div class="row">
-                        <img src="../../../assets/imgs/blog/a-8.jpg" alt="" class="col-sm-3 col-md-2 col-lg-3">
-                        <span>
-                            وضح الصور و اضافة
-                            <br>
-                            تأثيرات صوتية
-                            <br>
-                            <span style="padding: 0px 15px; background-color: black; color:white; font-size: 11px;">12:30</span>
-                        </span>
-                    </div>
-                </div>
-                <div class="side-card">
-                    <div class="row">
-                        <img src="../../../assets/imgs/blog/a-9.jpg" alt="" class="col-sm-3 col-md-2 col-lg-3">
-                        <span>
-                            وضح الصور و اضافة
-                            <br>
-                            تأثيرات صوتية
-                            <br>
-                            <span style="padding: 0px 15px; background-color: black; color:white; font-size: 11px;">12:30</span>
-                        </span>
-                    </div>
-                </div>
-                <div class="side-card">
-                    <div class="row">
-                        <img src="../../../assets/imgs/blog/a-10.jpg" alt="" class="col-sm-3 col-md-2 col-lg-3">
-                        <span>
-                            وضح الصور و اضافة
-                            <br>
-                            تأثيرات صوتية
-                            <br>
-                            <span style="padding: 0px 15px; background-color: black; color:white; font-size: 11px;">12:30</span>
-                        </span>
-                    </div>
-                </div>
-                <div class="side-card">
-                    <div class="row">
-                        <img src="../../../assets/imgs/blog/a-5.jpg" alt="" class="col-sm-3 col-md-2 col-lg-3">
-                        <span>
-                            وضح الصور و اضافة
-                            <br>
-                            تأثيرات صوتية
-                            <br>
-                            <span style="padding: 0px 15px; background-color: black; color:white; font-size: 11px;">12:30</span>
+                            <span style="padding: 0px 15px; background-color: black; color:white; font-size: 11px;">{{cor.time}}</span>
                         </span>
                     </div>
                 </div>
@@ -247,50 +105,10 @@
                 <br>
                 <br>
                 <h3>اخر التعليقات</h3>
-                <div class="side-comment" style="margin-bottom: 5px;">
-                    <img src="../../../assets/imgs/alumni/6.jpg" alt="" style="width: 40px;border-radius: 50%;">
-                    <span>حازم عثمان</span>
-                    <p class="text-muted">يتطلب تصميم الجرافيك وجود معنى وهدف لتوضيح فكرة ما من خلال الاتصال المرئي . الآن يمكنك بدء التصميم بطريقة فعالة .</p>
-                </div>
-                <div class="side-comment" style="margin-bottom: 5px;">
-                    <img src="../../../assets/imgs/alumni/10.jpg" alt="" style="width: 40px;border-radius: 50%;">
-                    <span>ناديه شحاته</span>
-                    <p class="text-muted">الصور و اضافة تأثيرات صوتي لصور و اضافة تأثيرات صوتي صوتية</p>
-                </div>
-                <div class="side-comment" style="margin-bottom: 5px;">
-                    <img src="../../../assets/imgs/alumni/11.jpg" alt="" style="width: 40px;border-radius: 50%;">
-                    <span>عبدالمنعم ياسر</span>
-                    <p class="text-muted">الصور و اضافة تأثيرات صوتي لصور و اضافة تأثيرات صوتي صوتية</p>
-                </div>
-                <div class="side-comment" style="margin-bottom: 5px;">
-                    <img src="../../../assets/imgs/alumni/12.jpg" alt="" style="width: 40px;border-radius: 50%;">
-                    <span>ياسمين صلاح</span>
-                    <p class="text-muted">يتطلب تصميم الجرافيك وجود معنى وهدف لتوضيح فكرة ما من خلال الاتصال المرئي . الآن يمكنك بدء التصميم بطريقة فعالة .</p>
-                </div>
-                <div class="side-comment" style="margin-bottom: 5px;">
-                    <img src="../../../assets/imgs/alumni/8.jpg" alt="" style="width: 40px;border-radius: 50%;">
-                    <span>هشام ماجد</span>
-                    <p class="text-muted">الصور و اضافة تأثيرات صوتي لصور و اضافة تأثيرات صوتي صوتية</p>
-                </div>
-                <div class="side-comment" style="margin-bottom: 5px;">
-                    <img src="../../../assets/imgs/alumni/9.png" alt="" style="width: 40px;border-radius: 50%;">
-                    <span>دينا أسامه</span>
-                    <p class="text-muted">يتطلب تصميم الجرافيك وجود معنى وهدف لتوضيح فكرة ما من خلال الاتصال المرئي . الآن يمكنك بدء التصميم بطريقة فعالة .</p>
-                </div>
-                <div class="side-comment" style="margin-bottom: 5px;">
-                    <img src="../../../assets/imgs/alumni/3.jpg" alt="" style="width: 40px;border-radius: 50%;">
-                    <span>داليا عبد العزيز</span>
-                    <p class="text-muted">يتطلب تصميم الجرافيك وجود معنى وهدف لتوضيح فكرة ما من خلال الاتصال المرئي . الآن يمكنك بدء التصميم بطريقة فعالة .</p>
-                </div>
-                <div class="side-comment" style="margin-bottom: 5px;">
-                    <img src="../../../assets/imgs/alumni/7.jpg" alt="" style="width: 40px;border-radius: 50%;">
-                    <span>عبد الرحمن محمد</span>
-                    <p class="text-muted">الصور و اضافة تأثيرات صوتي لصور و اضافة تأثيرات صوتي صوتية</p>
-                </div>
-                <div class="side-comment" style="margin-bottom: 5px;">
-                    <img src="../../../assets/imgs/alumni/5.jpg" alt="" style="width: 40px;border-radius: 50%;">
-                    <span>نور محمد</span>
-                    <p class="text-muted">يتطلب تصميم الجرافيك وجود معنى وهدف لتوضيح فكرة ما من خلال الاتصال المرئي . الآن يمكنك بدء التصميم بطريقة فعالة .</p>
+                <div class="side-comment" style="margin-bottom: 5px;" *ngFor="let com of comments">
+                    <img src={{com.image}} alt="" style="width: 40px;border-radius: 50%;">
+                    <span>{{com.name}}</span>
+                    <p class="text-muted">{{com.text}}</p>
                 </div>
             </div>
         </div>
