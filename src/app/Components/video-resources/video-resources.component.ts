@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery'
+import { Subscription } from 'rxjs';
+import { VideoResourcesServiceService } from 'src/app/Services/VideoResources/video-resources-service.service';
+import { VideoResourcesAlbumsInterface, VideoResourcesInterface } from 'src/app/ViewModels/VideoResources/video-resources-interface';
+import * as flickity from 'flickity';
 
 @Component({
   selector: 'app-video-resources',
@@ -8,7 +12,12 @@ import * as $ from 'jquery'
 })
 export class VideoResourcesComponent implements OnInit {
 
-  constructor() { }
+  albums : VideoResourcesAlbumsInterface[] = []
+  videos : VideoResourcesInterface[] = []
+  subscription : Subscription | null = null;
+  subscription2 : Subscription | null = null;
+  constructor(private album : VideoResourcesServiceService,
+    private video : VideoResourcesServiceService) { }
 
   ngOnInit(): void {
     const menu = document.querySelector('#mobile-menu');
@@ -21,10 +30,29 @@ export class VideoResourcesComponent implements OnInit {
   });
     }
 
-    (<any>$('.main-carousel')).flickity({
-        cellAlign: 'right',
-        contain: true
-      });
+    // (<any>$('.main-carousel')).flickity({
+    //     cellAlign: 'right',
+    //     contain: true
+    //   });
+
+  
+
+      this.subscription = this.album.getAllVideoResourcesAlbums().subscribe(
+        (response)=>{
+          this.albums = response;
+          
+        },
+        (err)=>{console.log(err)}
+      )
+      this.subscription2 = this.video.getAllVideoResources().subscribe(
+        (response)=>{
+          this.videos = response;
+          console.log(this.videos)
+          
+        },
+        (err)=>{console.log(err)}
+      )
   }
+
 
 }
