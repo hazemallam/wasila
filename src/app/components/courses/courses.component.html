@@ -42,6 +42,7 @@
     </div>
 </div>
 
+<!--
 <div class="courses">
     <div class="container">
         <div class="row">
@@ -92,6 +93,25 @@
                  </div>
                  </a>                     
              </div>
+        </div>
+    </div>
+</div>
+-->
+
+<div class="courses">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-6" *ngFor="let co of courses">
+                <a href="#">
+                    <div class="card" style="width: 100%;">
+                        <img src="../../../assets/imgs/{{co.cover}}" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">{{co.name}}</h5>
+                            <p class="card-text">{{co.description}}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
 </div>

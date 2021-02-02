@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CoursesService } from 'src/app/Services/Courses/courses.service';
+import { Icourses } from 'src/app/ViewModels/icourses';
 
 @Component({
   selector: 'app-courses',
@@ -7,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CoursesComponent implements OnInit {
 
-  constructor() { }
+  courses:Icourses[]=[]
+  constructor(private coursesService: CoursesService) { }
 
   ngOnInit(): void {
     const menu = document.querySelector('#mobile-menu');
@@ -17,6 +20,14 @@ export class CoursesComponent implements OnInit {
         menu.classList.toggle('is-active');
         menuLinks.classList.toggle('active');
     });
+
+    this.coursesService.getCourses().subscribe((response) => {
+      this.courses = response
+      console.log('courses', response)
+    },
+    (error)=> {
+      console.log(error)
+    })
     }
     
   }
