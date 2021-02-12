@@ -15,6 +15,8 @@ import { BlogComponent } from './Components/blog/blog.component';
 import { QuestionsComponent } from './Components/questions/questions.component';
 import { VideoResourcesComponent } from './Components/video-resources/video-resources.component';
 import { SoundResourcesComponent } from './Components/sound-resources/sound-resources.component';
+import { NotFoundComponent } from './Components/not-found/not-found.component';
+import { AdminGuard } from './guards/admin.guard';
 
 
 const routes: Routes = [
@@ -34,6 +36,7 @@ const routes: Routes = [
   {path: 'questions', component: QuestionsComponent},
   {path : 'videores', component : VideoResourcesComponent},
   {path : 'soundres', component: SoundResourcesComponent},
+  {path:'admin', component:NotFoundComponent, canActivate:[AdminGuard]},
   {path:'', redirectTo:'/home', pathMatch:'full'}
 
 ]

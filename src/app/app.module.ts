@@ -23,6 +23,7 @@ import { VideoResourcesComponent } from './Components/video-resources/video-reso
 import { SoundResourcesComponent } from './Components/sound-resources/sound-resources.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NotFoundComponent } from './Components/not-found/not-found.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BlogComponent,
     QuestionsComponent,
     VideoResourcesComponent,
-    SoundResourcesComponent
+    SoundResourcesComponent,
+    NotFoundComponent
 
   ],
   imports: [
