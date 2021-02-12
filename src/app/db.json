@@ -646,7 +646,7 @@
             "image":"../../../assets/imgs/blog/a-15.jpg"
         },
         {
-            "id":2,
+            "id":3,
             "name":"محمد علي",
             "date": "17 November 2019",
             "like": 220,
@@ -656,7 +656,7 @@
             "image":"../../../assets/imgs/blog/a-14.jpg"
         },
         {
-            "id":2,
+            "id":4,
             "name":"محمد علي",
             "date": "30 October 2020",
             "like": 700,
@@ -666,7 +666,7 @@
             "image":"../../../assets/imgs/blog/a-12.jpg"
         },
         {
-            "id":2,
+            "id":5,
             "name":"محمد علي",
             "date": "22 August 2020",
             "like": 222,
@@ -776,6 +776,15 @@
             "text": "يتطلب تصميم الجرافيك وجود معنى وهدف لتوضيح فكرة ما من خلال الاتصال المرئي . الآن يمكنك بدء التصميم بطريقة فعالة ."
         }
 
+    ],
+    "admins":[
+        {
+            "id":1,
+            "name":"Hazem Allam",
+            "userName":"allam",
+            "password":"123456789"
+        }
     ]
+    
 
 }
