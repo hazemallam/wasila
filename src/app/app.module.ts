@@ -21,8 +21,10 @@ import { BlogComponent } from './Components/blog/blog.component';
 import { QuestionsComponent } from './Components/questions/questions.component';
 import { VideoResourcesComponent } from './Components/video-resources/video-resources.component';
 import { SoundResourcesComponent } from './Components/sound-resources/sound-resources.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 
 @NgModule({
@@ -51,9 +53,21 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule,
+    TranslateModule.forRoot({
+      defaultLanguage: 'ar', 
+      loader: {
+        provide:TranslateLoader,
+        useFactory:createTranslateLoader,
+        deps:[HttpClient]
+      }
+    }) 
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+export function createTranslateLoader(http:HttpClient){
+  return new TranslateHttpLoader(http,'./assets/i18n/','.json')
+}

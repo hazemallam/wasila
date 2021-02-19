@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import * as $ from 'jquery';
 
 @Component({
@@ -8,7 +9,7 @@ import * as $ from 'jquery';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(public translate: TranslateService) { }
 
   ngOnInit(): void {
     const menu = document.querySelector('#mobile-menu');
