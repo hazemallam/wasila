@@ -265,5 +265,13 @@
     "alumni": {
         "alumniTitle": "الخريجون",
         "alumniProjects": "أعمال الطلبة المميزة"
+    },
+    "blog": {
+        "blogTitle": "المدونة",
+        "mostRead": "الأكثر قراءة",
+        "more": "المزيد",
+        "miniCourses": "كورسات مميزة",
+        "moreCourse": "شاهد كل الكورسات",
+        "lastComments": "اخر التعليقات"
     }
 }

@@ -254,5 +254,13 @@
     "alumni": {
         "alumniTitle": "Alumni",
         "alumniProjects": "Alumni Projects"
+    },
+    "blog": {
+        "blogTitle": "Blog",
+        "mostRead": "Most read",
+        "more": "More",
+        "miniCourses": "Mini Courses",
+        "moreCourse": "All Mini Courses",
+        "lastComments": "Latest comments"
     }
 }
