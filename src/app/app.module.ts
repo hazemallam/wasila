@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import {NgxPaginationModule} from 'ngx-pagination';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './Components/register/register.component';
@@ -26,6 +28,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NotFoundComponent } from './Components/not-found/not-found.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { NgxAudioPlayerModule } from 'ngx-audio-player';
+import { ArticleComponent } from './Components/article//article.component';
+import { MiniCoursesComponent } from './Components/mini-courses/mini-courses.component';
 
 
 @NgModule({
@@ -46,7 +51,9 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
     QuestionsComponent,
     VideoResourcesComponent,
     SoundResourcesComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ArticleComponent,
+    MiniCoursesComponent
 
   ],
   imports: [
@@ -63,7 +70,10 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
         useFactory:createTranslateLoader,
         deps:[HttpClient]
       }
-    }) 
+    }) ,
+    ReactiveFormsModule ,
+    NgxAudioPlayerModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

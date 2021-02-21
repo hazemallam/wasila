@@ -8,23 +8,14 @@ import { VideoResourcesAlbumsInterface, VideoResourcesInterface } from 'src/app/
   templateUrl: './video-resources.component.html',
   styleUrls: ['./video-resources.component.scss']
 })
-export class VideoResourcesComponent implements OnInit, AfterViewInit {
+export class VideoResourcesComponent implements OnInit{
 
-  albums : VideoResourcesAlbumsInterface[] = []
   videos : VideoResourcesInterface[] = []
   subscription : Subscription | null = null;
-  subscription2 : Subscription | null = null;
-  
-  constructor(private album : VideoResourcesServiceService,
-    private video : VideoResourcesServiceService) { }
 
-  ngAfterViewInit(): void {
-    
-    // (<any>$('.main-carousel')).flickity({
-    //   cellAlign: 'right',
-    //   contain: true
-    // });
-  }
+  
+  constructor( private video : VideoResourcesServiceService) { }
+
 
   ngOnInit(): void {
     const menu = document.querySelector('#mobile-menu');
@@ -37,18 +28,7 @@ export class VideoResourcesComponent implements OnInit, AfterViewInit {
   });
     }
 
-   
-
-  
-
-      this.subscription = this.album.getAllVideoResourcesAlbums().subscribe(
-        (response)=>{
-          this.albums = response;
-          console.log(response)
-        },
-        (err)=>{console.log(err)}
-      )
-      this.subscription2 = this.video.getAllVideoResources().subscribe(
+      this.subscription = this.video.getAllVideoResources().subscribe(
         (response)=>{
           this.videos = response;
           console.log(this.videos)
@@ -56,9 +36,10 @@ export class VideoResourcesComponent implements OnInit, AfterViewInit {
         },
         (err)=>{console.log(err)}
       )
-      // $('').flickity( 'append', this.albums )
-      // this.flkty.prepend(this.albums)
+
   }
+
+
 
 
 }

@@ -16,6 +16,7 @@ export class BlogComponent implements OnInit {
   subscription : Subscription | null = null;
   subscription2 : Subscription | null = null;
   subscription3 : Subscription | null =null;
+  
   constructor(private blog : BlogServiceService,
     private course : BlogServiceService,
     private comment : BlogServiceService) { }

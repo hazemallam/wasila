@@ -38,7 +38,7 @@
         <h1>{{"blog.blogTitle" | translate}}</h1>
         <div class="row">
             <div class="col-lg-6" *ngFor="let bl of blogs.slice(0,2)">
-                <a href="article.html" >
+                <a routerLink="/article" >
                     <div class="card" style="width: 100%;">
                         <img src = {{bl.image}} class="card-img-top" alt="">
                         <div class="card-body">
@@ -64,7 +64,7 @@
         <div class="row">
             <div class="col-lg-6">
                 <h3>{{"blog.mostRead" | translate}}</h3>
-                <a href="article.html" *ngFor="let blo of blogs">
+                <a routerLink="/article" *ngFor="let blo of blogs">
                     <div class="card" style="width: 82%;">
                         <img src={{blo.image}} class="card-img-top" alt="">
                         <div class="card-body">
@@ -88,7 +88,7 @@
             <div class="col-lg-5">
                 <h3 class="um-1">{{"blog.miniCourses" | translate}}</h3>
                 <div class="side-card" *ngFor="let cor of courses">
-                    <div class="row">
+                    <div class="row" routerLink="/article">
                         <img src={{cor.image}} alt="" class="col-sm-3 col-md-2 col-lg-3">
                         <span>
                             {{cor.text1}}

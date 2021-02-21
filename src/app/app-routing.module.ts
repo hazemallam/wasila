@@ -17,6 +17,8 @@ import { VideoResourcesComponent } from './Components/video-resources/video-reso
 import { SoundResourcesComponent } from './Components/sound-resources/sound-resources.component';
 import { NotFoundComponent } from './Components/not-found/not-found.component';
 import { AdminGuard } from './guards/admin.guard';
+import {ArticleComponent} from './Components/article/article.component'
+import {MiniCoursesComponent} from './Components/mini-courses/mini-courses.component'
 
 
 const routes: Routes = [
@@ -37,6 +39,8 @@ const routes: Routes = [
   {path : 'videores', component : VideoResourcesComponent},
   {path : 'soundres', component: SoundResourcesComponent},
   {path:'admin', component:NotFoundComponent, canActivate:[AdminGuard]},
+  {path : 'article', component: ArticleComponent},
+  {path : 'minicourses', component: MiniCoursesComponent},
   {path:'', redirectTo:'/home', pathMatch:'full'}
 
 ]
