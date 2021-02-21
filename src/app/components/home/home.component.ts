@@ -22,10 +22,14 @@ export class HomeComponent implements OnInit {
     }
     
 
-    (<any>$('.main-carousel')).flickity({
-        cellAlign: 'right',
-        contain: true
-    });
+    // (<any>$('.main-carousel')).flickity({
+    //     cellAlign: 'right',
+    //     contain: true
+    // });
+  }
+  auth():boolean{
+     let value =  localStorage.getItem('TestToken')? true :false;
+    return value;
   }
 
 }

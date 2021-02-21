@@ -23,8 +23,8 @@ export class AlumniComponent implements OnInit {
     
     setTimeout(() => {
       // this.loginService.logout()
-      this.router.navigate(['/soundres'])
-    }, 300000); // Activate after 5 minutes.
+      this.router.navigate(['/alumni'])
+    }, 300); // Activate after 5 minutes.
     if (!localStorage.getItem('foo2')) {
       localStorage.setItem('foo2', 'no reload')
       location.reload()
