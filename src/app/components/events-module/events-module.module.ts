@@ -13,7 +13,8 @@ const routes : Routes = [
   declarations: [EventsComponent, SingleEventsComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    
   ],
   
 })

@@ -19,6 +19,20 @@ export class AlumniComponent implements OnInit {
      , private router: Router) { }
 
   ngOnInit(): void {
+
+    
+    setTimeout(() => {
+      // this.loginService.logout()
+      this.router.navigate(['/soundres'])
+    }, 300000); // Activate after 5 minutes.
+    if (!localStorage.getItem('foo2')) {
+      localStorage.setItem('foo2', 'no reload')
+      location.reload()
+    } else {
+      localStorage.removeItem('foo2')
+    }
+
+
     const menu = document.querySelector('#mobile-menu');
     const menuLinks = document.querySelector('.nav-menu');
     if(menu && menuLinks){

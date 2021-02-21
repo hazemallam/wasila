@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 // import * as $ from 'jquery'
 import { Subscription } from 'rxjs';
 import { VideoResourcesServiceService } from 'src/app/Services/VideoResources/video-resources-service.service';
@@ -14,10 +15,24 @@ export class VideoResourcesComponent implements OnInit{
   subscription : Subscription | null = null;
 
   
-  constructor( private video : VideoResourcesServiceService) { }
+  constructor( private video : VideoResourcesServiceService, private router :Router) { }
 
 
   ngOnInit(): void {
+
+    
+    setTimeout(() => {
+      // this.loginService.logout()
+      this.router.navigate(['/soundres'])
+    }, 300000); // Activate after 5 minutes.
+    if (!localStorage.getItem('foo1')) {
+      localStorage.setItem('foo1', 'no reload')
+      location.reload()
+    } else {
+      localStorage.removeItem('foo1')
+    }
+
+
     const menu = document.querySelector('#mobile-menu');
     const menuLinks = document.querySelector('.nav-menu');
     if(menu && menuLinks){

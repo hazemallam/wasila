@@ -31,6 +31,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { NgxAudioPlayerModule } from 'ngx-audio-player';
 import { ArticleComponent } from './Components/article//article.component';
 import { MiniCoursesComponent } from './Components/mini-courses/mini-courses.component';
+import { EventsModuleModule } from './Components/events-module/events-module.module';
 
 
 @NgModule({
