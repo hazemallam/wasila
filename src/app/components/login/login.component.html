@@ -9,28 +9,35 @@
                     </svg>
                 </a>
             </div>
+        <form #frm="ngForm" (ngSubmit)="checkLogin()">  
             <div class="login-card">
                 <h1>{{"login.log" | translate}}</h1>
                 <span>
                     <div class="field">
-                        <label class="field-label"><span>{{"login.email" | translate}}</span></label>
-                        <input type="email" autofocus="autofocus" class="rounded-input">
+                        <label class="field-label" for="prEmail"><span>{{"login.email" | translate}}</span></label>
+                        <input type="email" autofocus="autofocus" 
+                        [(ngModel)]="NewUser.email" required name="Email" 
+                        id="prdEmail" placeholder="" minlength="7"
+                        class="rounded-input">
                     </div>
                 </span>
                 <span>
                     <div class="field">
-                        <label class="field-label"><span>{{"login.password" | translate}}</span></label>
-                        <input type="password" autofocus="autofocus" class="rounded-input">
+                        <label class="field-label" for="prdPassword"><span>{{"login.password" | translate}}</span></label>
+                        <input type="password" autofocus="autofocus" 
+                        #prdName="ngModel" [(ngModel)]="NewUser.password" required minlength="5"
+                        class="rounded-input"  name="Password" id="prdName"  placeholder="" >
                     </div>                        
                 </span>
                 <div class="row">
-                    <button class="col-lg-6 login-btn">{{"login.log" | translate}}</button>
+                    <button class="col-lg-6 login-btn" type="submit" [disabled]="frm.invalid">{{"login.log" | translate}}</button>
                     <div class="col-lg-6 login-forget">{{"login.forget" | translate}}<a href="#"></a></div>
                 </div>
                 <div class="no-account">
                     <a routerLink="/register">{{"login.new-accounr" | translate}}</a>
                 </div>
             </div>
+            </form>
         </div>
     </div>
 </div>

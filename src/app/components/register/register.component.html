@@ -9,30 +9,37 @@
                     </svg>
                 </a>
             </div>
+         <form #frm="ngForm" (ngSubmit)="addUsersReg()"> 
             <div class="register-card">
                 <h1>{{"register.reg" | translate}}</h1>
                 <span>
                     <div class="reg-field">
-                        <label class="field-label"><span>{{"register.name" | translate}}</span></label>
-                        <input type="email" autofocus="autofocus" class="rounded-input">
+                        <label class="field-label" for="prdName"><span>{{"register.name" | translate}}</span></label>
+                        <input type="text"  [(ngModel)]="NewUser.name" autofocus="autofocus" 
+                        class="rounded-input" required minlength="2" name="Id" id="prdName" >
                     </div>
                 </span>
                 <span>
                     <div class="reg-field">
                         <label class="field-label"><span>{{"login.email" | translate}}</span></label>
-                        <input type="email" autofocus="autofocus" class="rounded-input">
+                        <input type="email" autofocus="autofocus" class="rounded-input"
+                        [(ngModel)]="NewUser.email"  minlength="7"
+                         required  name="email" id="prdEmail">
                     </div>
                 </span>
                 <span>
                     <div class="reg-field">
                         <label class="field-label"><span>{{"login.password" | translate}}</span></label>
-                        <input type="password" autofocus="autofocus" class="rounded-input">
+                        <input type="password" autofocus="autofocus" class="rounded-input"
+                        [(ngModel)]="NewUser.password" required minlength="5"
+                        name="Password" id="prdPassword">
                     </div>                        
                 </span>
                 <div class="btn-container">
-                    <button class="col-lg-6 register-btn">{{"register.reg-account" | translate}}</button>
+                    <button class="col-lg-6 register-btn"   type="submit" [disabled]="frm.invalid" >{{"register.reg-account" | translate}}</button>
                 </div>
             </div>
+            </form>
         </div>
     </div>
 </div>
