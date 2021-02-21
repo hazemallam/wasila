@@ -191,62 +191,62 @@
     "alumniLists":[
         {
             "id":1,
-            "name":"عادل مصطفى",
+            "name":"عادل مصطفى - Adel Mostafa",
             "alumni":"../../../assets/imgs/alumni/1.jpg"
         },
         { 
             "id":2,
-            "name":"مليكة عزالدي",
+            "name":"مليكة عز الدين - Malika Ezz El-Din",
             "alumni": "../../../assets/imgs/alumni/2.jpg"
         },
         { 
             "id":3,
-            "name":" محمد احمد",
+            "name":"محمد أحمد - Mohamed Ahmed",
             "alumni":"../../../assets/imgs/alumni/4.jpg"
         },
         {
             "id":4,
-            "name":"داليا عبد العزيز ",
+            "name":"داليا عبد العزيز - Dalia Abdel Aziz",
             "alumni": "../../../assets/imgs/alumni/3.jpg"
         },
         {
             "id":5,
-            "name":"عبد الرحمن محمد",
+            "name":"عبد الرحمن محمد - Abdulrahman Mohammed",
             "alumni":"../../../assets/imgs/alumni/7.jpg"
         },
         {
             "id":6,
-            "name":"نور محمد",
+            "name":"نور محمد - Noor Mohammad",
             "alumni":"../../../assets/imgs/alumni/5.jpg"
         },
         {
             "id":7,
-            "name":"حازم عثمان",
+            "name":"حازم عثمان - Hazem Othman",
             "alumni":"../../../assets/imgs/alumni/6.jpg"
         },
         {
             "id":8,
-            "name":"هشام ماجد",
+            "name":"هشام ماجد - Hisham Majid",
             "alumni":"../../../assets/imgs/alumni/8.jpg"
         },
         {
             "id":9,
-            "name":"دينا اسامه",
+            "name":"دينا اسامه - Dina Osama",
             "alumni":"../../../assets/imgs/alumni/9.jpg"
         },
         {
             "id":10,
-            "name":"نادية شحاته",
+            "name":"نادية شحاته - Nadia Shehata",
             "alumni":"../../../assets/imgs/alumni/10.jpg"
         },
         {
             "id":11,
-            "name":"عبد المنعم ياسر",
+            "name":"عبد المنعم ياسر - Abdel Moneim Yasser",
             "alumni":"../../../assets/imgs/alumni/11.jpg"
         },
         {
             "id":12,
-            "name":"ياسمين صلاح",
+            "name":"ياسمين صلاح - Yasmine Salah",
             "alumni":"../../../assets/imgs/alumni/12.jpg"
         }
     ],
@@ -753,7 +753,7 @@
         },
         {
             "id":6,
-            "image": "../../../assets/imgs/alumni/9.png",
+            "image": "../../../assets/imgs/alumni/9.jpg",
             "name": "دينا أسامه",
             "text": "يتطلب تصميم الجرافيك وجود معنى وهدف لتوضيح فكرة ما من خلال الاتصال المرئي . الآن يمكنك بدء التصميم بطريقة فعالة ."
         },

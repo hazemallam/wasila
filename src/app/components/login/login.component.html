@@ -10,25 +10,25 @@
                 </a>
             </div>
             <div class="login-card">
-                <h1>تسجيل دخول</h1>
+                <h1>{{"login.log" | translate}}</h1>
                 <span>
                     <div class="field">
-                        <label class="field-label"><span>البريد الالكتروني</span></label>
+                        <label class="field-label"><span>{{"login.email" | translate}}</span></label>
                         <input type="email" autofocus="autofocus" class="rounded-input">
                     </div>
                 </span>
                 <span>
                     <div class="field">
-                        <label class="field-label"><span>كلمة المرور</span></label>
+                        <label class="field-label"><span>{{"login.password" | translate}}</span></label>
                         <input type="password" autofocus="autofocus" class="rounded-input">
                     </div>                        
                 </span>
                 <div class="row">
-                    <button class="col-lg-6 login-btn">تسجيل الدخول</button>
-                    <div class="col-lg-6 login-forget"><a href="#">نسيت كلمة المرور؟</a></div>
+                    <button class="col-lg-6 login-btn">{{"login.log" | translate}}</button>
+                    <div class="col-lg-6 login-forget">{{"login.forget" | translate}}<a href="#"></a></div>
                 </div>
                 <div class="no-account">
-                    <a routerLink="/register">لا يوجد لديك حساب؟ سجل الأن</a>
+                    <a routerLink="/register">{{"login.new-accounr" | translate}}</a>
                 </div>
             </div>
         </div>

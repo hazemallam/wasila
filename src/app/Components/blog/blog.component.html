@@ -12,30 +12,30 @@
         </div>    
         <ul class="nav-menu">
             <li>
-                <a class="nav-links" routerLink="/courses">الدورات</a>
+                <a class="nav-links" routerLink="/courses">{{"Navbar.Courses" | translate}}</a>
             </li>
             <li>
-                <a class="nav-links" routerLink="/videores">المصادر المجانية</a>
+                <a class="nav-links" routerLink="/videores">{{"Navbar.Resources" | translate}}</a>
             </li>
             <li>
-                <a class="nav-links" routerLink="/events/allevents">الفعاليات</a>
+                <a class="nav-links" routerLink="/events/allevents">{{"Navbar.Events" | translate}}</a>
             </li>
             <li>
-                <a class="nav-links" routerLink="/alumni">الخريجين</a>
+                <a class="nav-links" routerLink="/alumni">{{"Navbar.Alumni" | translate}}</a>
             </li>
             <li>
-                <a class="nav-links" routerLink="/blog">المدونه</a>
+                <a class="nav-links" routerLink="/blog">{{"Navbar.blog" | translate}}</a>
             </li>
             <li>
-                <a class="nav-links nav-links-btn" routerLink="/login">تسجيل دخول</a>
+                <a class="nav-links nav-links-btn" routerLink="/login">{{"Navbar.Log" | translate}}</a>
             </li>
-        </ul>  
+        </ul> 
     </div>     
 </nav>
 
 <div class="blog-head">
     <div class="container">
-        <h1>المدونة</h1>
+        <h1>{{"blog.blogTitle" | translate}}</h1>
         <div class="row">
             <div class="col-lg-6" *ngFor="let bl of blogs.slice(0,2)">
                 <a href="article.html" >
@@ -63,7 +63,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <h3>الأكثر قراة</h3>
+                <h3>{{"blog.mostRead" | translate}}</h3>
                 <a href="article.html" *ngFor="let blo of blogs">
                     <div class="card" style="width: 82%;">
                         <img src={{blo.image}} class="card-img-top" alt="">
@@ -82,11 +82,11 @@
                 </a>  
                   
                 
-                <button><a href="#">المزيد</a></button>
+                <button><a href="#">{{"blog.more" | translate}}</a></button>
             </div>
             <div class="col-lg-1"></div>
             <div class="col-lg-5">
-                <h3 class="um-1">كورسات مميزة</h3>
+                <h3 class="um-1">{{"blog.miniCourses" | translate}}</h3>
                 <div class="side-card" *ngFor="let cor of courses">
                     <div class="row">
                         <img src={{cor.image}} alt="" class="col-sm-3 col-md-2 col-lg-3">
@@ -99,12 +99,12 @@
                         </span>
                     </div>
                 </div>
-                <button><a routerLink="/courses">شاهد كل الكورسات</a></button>
+                <button><a routerLink="/courses">{{"blog.moreCourse" | translate}}</a></button>
                 <br>
                 <br>
                 <br>
                 <br>
-                <h3>اخر التعليقات</h3>
+                <h3>{{"blog.lastComments" | translate}}</h3>
                 <div class="side-comment" style="margin-bottom: 5px;" *ngFor="let com of comments">
                     <img src={{com.image}} alt="" style="width: 40px;border-radius: 50%;">
                     <span>{{com.name}}</span>
@@ -119,8 +119,8 @@
 <div class="start-now">
     <div class="start-now-bg st-now2">
         <div class="container">
-            <h3>تُقدم وسيلة مسارات مُصممة خصيصاً لأجلك لتعلم التصميم من البداية حتى الإحترافية </h3>
-            <button><a routerLink="/register">انشاء حساب</a></button>
+            <h3>{{"Home.start-now" | translate}} </h3>
+            <button><a routerLink="/register">{{"Home.start-nowbtn" | translate}}</a></button>
         </div>
     </div>
 </div>         
@@ -131,33 +131,33 @@
         <div class="row first-footer">
             <div class="col-sm-4 col-md-3 col-lg-3">
                 <ul>
-                    <li><a routerLink="/courses">الدورات</a></li>
-                    <li><a routerLink="/events/allevents">الفعاليات</a></li>
-                    <li><a routerLink="/alumni">الخريجون</a></li>
+                    <li><a routerLink="/courses">{{"Navbar.Courses" | translate}}</a></li>
+                    <li><a routerLink="/events/allevents">{{"Navbar.Events" | translate}}</a></li>
+                    <li><a routerLink="/alumni">{{"Navbar.Alumni" | translate}}</a></li>
                 </ul>
             </div>
             <div class="col-sm-4 col-md-3 col-lg-3">
                 <ul>
-                    <li><a routerLink="/blog">المدونة</a></li>
-                    <li><a routerLink="/videores">المصادر المجانية</a></li>
-                    <li><a routerLink="/soundres">تسجيلات صوتية</a></li>
+                    <li><a routerLink="/blog">{{"Navbar.blog" | translate}}</a></li>
+                    <li><a routerLink="/videores">{{"Navbar.Resources" | translate}}</a></li>
+                    <li><a routerLink="/soundres">{{"Footer.Audio" | translate}}</a></li>
                 </ul>                    
             </div>
             <div class="col-sm-4 col-md-3 col-lg-3">
                 <ul>
-                    <li><a routerLink="/contact">تواصل معنا</a></li>
-                    <li><a routerLink="/questions">الاسئلة الشائعة</a></li>
-                    <li><a routerLink="/privacy">الخصوصية</a></li>
-                </ul>                    
+                    <li><a routerLink="/contact">{{"Footer.Contact" | translate}}</a></li>
+                    <li><a routerLink="/questions">{{"Footer.questions" | translate}}</a></li>
+                    <li><a routerLink="/privacy">{{"Footer.privacy" | translate}}</a></li>
+                </ul>                        
             </div>
             <div class="col-sm-4 col-md-3 col-lg-3">
-                <span>وسائل الدفع</span>
+                <span>{{"Footer.payment" | translate}}</span>
                 <ul class="img-list">
                     <li><img src="../../../assets/imgs/paypal.svg" alt=""></li>
                     <li><img src="../../../assets/imgs/visa.svg" alt=""></li>
                     <li><img src="../../../assets/imgs/mastercard.svg" alt=""></li>
                 </ul> 
-                <a href="#">إبلاغ الدفع</a>                   
+                <a href="#">{{"Footer.payment2" | translate}}</a>                   
             </div>
         </div>
         <div class="last-footer">
