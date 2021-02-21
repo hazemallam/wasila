@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { EventServiceService } from 'src/app/Services/Events/event-service.service';
 import { IEvent } from 'src/app/ViewModels/ievent';
 
@@ -9,7 +10,7 @@ import { IEvent } from 'src/app/ViewModels/ievent';
 })
 export class EventsComponent implements OnInit {
   events:IEvent[] = []
-  constructor(private eventService : EventServiceService) { }
+  constructor(private eventService : EventServiceService, private translate: TranslateService) { }
 
   ngOnInit(): void {
     const menu = document.querySelector('#mobile-menu');

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { EventServiceService } from 'src/app/Services/Events/event-service.service';
 import { IEvent } from 'src/app/ViewModels/ievent';
 
@@ -10,7 +11,8 @@ import { IEvent } from 'src/app/ViewModels/ievent';
 })
 export class SingleEventsComponent implements OnInit {
   event:IEvent={ year:'',location:'',date:'',title:'',cover:'',description:'',speakers:[{name:'', cover:'', bio:''}]}
-  constructor(private eventService : EventServiceService, private activatedRoute : ActivatedRoute) { }
+  constructor(private eventService : EventServiceService, private activatedRoute : ActivatedRoute,
+    private translate: TranslateService) { }
 
   ngOnInit(): void {
     const menu = document.querySelector('#mobile-menu');
