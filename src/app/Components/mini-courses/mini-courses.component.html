@@ -1,3 +1,4 @@
+
 <nav class="my-navbar">
     <div class="nav-contanier">
         <a routerLink="/home" class="a-logo">
@@ -33,97 +34,33 @@
     </div>     
 </nav>
 
-<div class="blog-head">
+<div class="headline">
+    <div class="container headline-contanier">
+        <h1>جميع الكورسات</h1>
+        
+    </div>
+</div>
+
+
+<div class="courses">
     <div class="container">
-        <h1>المدونة</h1>
         <div class="row">
-            <div class="col-lg-6" *ngFor="let bl of blogs.slice(0,2)">
-                <a routerLink="/article" >
+            <div class="col-md-3 col-lg-3" *ngFor="let cor of miniCourses | paginate: { itemsPerPage: 4, currentPage: p, totalItems: 20}">
+                <a href="#">
                     <div class="card" style="width: 100%;">
-                        <img src = {{bl.image}} class="card-img-top" alt="">
+                        <img src = {{cor.image}} class="card-img-top" alt="">
                         <div class="card-body">
-                        <div>
-                            <img src={{bl.authorimage}} alt="">
-                            <span style="margin-left: 15px;">{{bl.name}}</span>
-                            <span class="text-muted">{{bl.date}}</span>
-
-                            <span class="text-muted" style="float: left;margin-right: 15px;margin-top: 5px;">{{bl.like}} <img src="../../../assets/imgs/heart.png" alt="" style="width: 20px;"></span>
-                            <span class="text-muted" style="float: left;margin-top: 5px;">{{bl.comment}}  <img src="../../../assets/imgs/comment.png" alt=""  style="width: 20px;"></span>
+                            <h5 class="card-title">{{cor.name}}</h5>
                         </div>
-                        <p class="card-text">{{bl.text}}</p>
-                        </div>
-                    </div>  
-                </a>  
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="blog-body">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <h3>الأكثر قراة</h3>
-                <a routerLink="/article" *ngFor="let blo of blogs">
-                    <div class="card" style="width: 82%;">
-                        <img src={{blo.image}} class="card-img-top" alt="">
-                        <div class="card-body">
-                        <div>
-                            <img src={{blo.authorimage}} alt="">
-                            <span style="margin-left: 15px;">{{blo.name}}</span>
-                            <span class="text-muted">{{blo.date}}</span>
-
-                            <span class="text-muted" style="float: left;margin-right: 15px;margin-top: 5px;">{{blo.like}} <img src="../../../assets/imgs/heart.png" alt="" style="width: 20px;"></span>
-                            <span class="text-muted" style="float: left;margin-top: 5px;">{{blo.comment}}  <img src="../../../assets/imgs/comment.png" alt=""  style="width: 20px;"></span>
-                        </div>
-                        <p class="card-text">{{blo.text}}</p>
-                        </div>
-                    </div>  
-                </a>  
-                  
-                
-                <button><a href="#">المزيد</a></button>
-            </div>
-            <div class="col-lg-1"></div>
-            <div class="col-lg-5">
-                <h3 class="um-1">كورسات مميزة</h3>
-                <div class="side-card" *ngFor="let cor of courses">
-                    <div class="row" routerLink="/article">
-                        <img src={{cor.image}} alt="" class="col-sm-3 col-md-2 col-lg-3">
-                        <span>
-                            {{cor.text1}}
-                            <br>
-                            {{cor.text2}}
-                            <br>
-                            <span style="padding: 0px 15px; background-color: black; color:white; font-size: 11px;">{{cor.time}}</span>
-                        </span>
                     </div>
-                </div>
-                <button><a routerLink="/courses">شاهد كل الكورسات</a></button>
-                <br>
-                <br>
-                <br>
-                <br>
-                <h3>اخر التعليقات</h3>
-                <div class="side-comment" style="margin-bottom: 5px;" *ngFor="let com of comments">
-                    <img src={{com.image}} alt="" style="width: 40px;border-radius: 50%;">
-                    <span>{{com.name}}</span>
-                    <p class="text-muted">{{com.text}}</p>
-                </div>
+                </a>
             </div>
+            
         </div>
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
     </div>
 </div>
 
-
-<div class="start-now">
-    <div class="start-now-bg st-now2">
-        <div class="container">
-            <h3>تُقدم وسيلة مسارات مُصممة خصيصاً لأجلك لتعلم التصميم من البداية حتى الإحترافية </h3>
-            <button><a routerLink="/register">انشاء حساب</a></button>
-        </div>
-    </div>
-</div>         
 
 
 <div class="footer">
@@ -148,7 +85,7 @@
                     <li><a routerLink="/contact">تواصل معنا</a></li>
                     <li><a routerLink="/questions">الاسئلة الشائعة</a></li>
                     <li><a routerLink="/privacy">الخصوصية</a></li>
-                </ul>                    
+                </ul>                                  
             </div>
             <div class="col-sm-4 col-md-3 col-lg-3">
                 <span>وسائل الدفع</span>
@@ -161,7 +98,8 @@
             </div>
         </div>
         <div class="last-footer">
-            <h6>صنع بواسطة حبيبة وائل<span style="color: RED;">❤</span></h6>
+            <h6>صنع بواسطة حبيبة وائل <span style="color: RED;">❤</span></h6>
         </div>
     </div>
 </div>
+

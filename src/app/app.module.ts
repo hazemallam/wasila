@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import {NgxPaginationModule} from 'ngx-pagination';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './Components/register/register.component';
@@ -23,6 +25,9 @@ import { VideoResourcesComponent } from './Components/video-resources/video-reso
 import { SoundResourcesComponent } from './Components/sound-resources/sound-resources.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgxAudioPlayerModule } from 'ngx-audio-player';
+import { ArticleComponent } from './Components/article//article.component';
+import { MiniCoursesComponent } from './Components/mini-courses/mini-courses.component';
 
 
 @NgModule({
@@ -42,7 +47,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BlogComponent,
     QuestionsComponent,
     VideoResourcesComponent,
-    SoundResourcesComponent
+    SoundResourcesComponent,
+    ArticleComponent,
+    MiniCoursesComponent
 
   ],
   imports: [
@@ -51,7 +58,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule ,
+    NgxAudioPlayerModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
