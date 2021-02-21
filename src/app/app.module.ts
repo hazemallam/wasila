@@ -64,6 +64,7 @@ import { EventsModuleModule } from './Components/events-module/events-module.mod
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    EventsModuleModule,
     TranslateModule.forRoot({
       defaultLanguage: 'ar', 
       loader: {
