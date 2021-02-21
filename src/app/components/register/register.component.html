@@ -9,30 +9,44 @@
                     </svg>
                 </a>
             </div>
+            <form #frm="ngForm" (ngSubmit)="addUsersReg()"> 
             <div class="register-card">
                 <h1>إنشاء حساب</h1>
                 <span>
                     <div class="reg-field">
-                        <label class="field-label"><span>الاسم بالكامل</span></label>
-                        <input type="email" autofocus="autofocus" class="rounded-input">
+                        <label class="field-label" for="prdName"><span>الاسم بالكامل</span></label>
+                        <input type="text"  [(ngModel)]="NewUser.name"
+                         autofocus="autofocus" class="rounded-input"
+                         required min="6" name="Id" id="prdName"
+                          >
                     </div>
                 </span>
                 <span>
                     <div class="reg-field">
-                        <label class="field-label"><span>البريد الالكتروني</span></label>
-                        <input type="email" autofocus="autofocus" class="rounded-input">
+                        <label class="field-label" for="prdEmail"><span>البريد الالكتروني</span></label>
+                        <input type="email" autofocus="autofocus"
+                         class="rounded-input"  [(ngModel)]="NewUser.email"
+                         required  name="email" id="prdEmail">
                     </div>
                 </span>
                 <span>
                     <div class="reg-field">
-                        <label class="field-label"><span>كلمة المرور</span></label>
-                        <input type="password" autofocus="autofocus" class="rounded-input">
+                        <label class="field-label" for="prdPassword"><span>كلمة المرور</span></label>
+                        <input type="password" 
+                        autofocus="autofocus" class="rounded-input"
+                        [(ngModel)]="NewUser.password"
+                        name="Password" id="prdPassword"
+                        >
                     </div>                        
                 </span>
                 <div class="btn-container">
-                    <button class="col-lg-6 register-btn">تسجيل حساب</button>
+                    <button class="col-lg-6 register-btn"
+                    type="submit" [disabled]="frm.invalid" 
+                     >تسجيل حساب</button>
                 </div>
             </div>
+        </form>
         </div>
     </div>
 </div>
+<!-- <button type="button" class="btn btn-primary" (click)="Logout()">Logout</button> -->

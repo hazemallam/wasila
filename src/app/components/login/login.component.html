@@ -9,28 +9,39 @@
                     </svg>
                 </a>
             </div>
+            <form [formGroup]="loginFrm" (ngSubmit)="checkLogin()"> 
             <div class="login-card">
                 <h1>تسجيل دخول</h1>
                 <span>
                     <div class="field">
-                        <label class="field-label"><span>البريد الالكتروني</span></label>
-                        <input type="email" autofocus="autofocus" class="rounded-input">
+                        <label class="field-label" for="prdEmail"><span>البريد الالكتروني</span></label>
+                        <input type="email" autofocus="autofocus" class="rounded-input" 
+                        [(ngModel)]="NewUser.email" [class.is-invalid]="loginFrm.controls['Email'].invalid"
+                        [class.is-valid]="loginFrm.controls['Email'].valid" placeholder=""
+                         required  id="prdEmail">
                     </div>
                 </span>
                 <span>
                     <div class="field">
-                        <label class="field-label"><span>كلمة المرور</span></label>
-                        <input type="password" autofocus="autofocus" class="rounded-input">
-                    </div>                        
+                        <label class="field-label" for="prdPassword"><span>كلمة المرور</span></label>
+                        <input type="password" autofocus="autofocus" class="rounded-input"
+                        [(ngModel)]="NewUser.password" 
+                        formControlName="Password"
+                        name="Password" id="prdPassword">
+                        
+                    </div>                          
                 </span>
                 <div class="row">
-                    <button class="col-lg-6 login-btn">تسجيل الدخول</button>
+                    <button class="col-lg-6 login-btn"  type="submit"  [disabled]="loginFrm.invalid"
+                    >تسجيل الدخول</button>
                     <div class="col-lg-6 login-forget"><a href="#">نسيت كلمة المرور؟</a></div>
                 </div>
                 <div class="no-account">
                     <a routerLink="/register">لا يوجد لديك حساب؟ سجل الأن</a>
                 </div>
             </div>
+        </form>
         </div>
     </div>
 </div>
+<!-- <button type="button" class="btn btn-primary" (click)="Logout()">Logout</button> -->
