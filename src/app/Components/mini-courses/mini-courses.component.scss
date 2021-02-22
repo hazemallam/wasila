@@ -393,3 +393,7 @@
 .page-icon:hover {
     fill: #444;
 }
+
+.my-pagination .ngx-pagination .current {
+    background: linear-gradient(90deg,#9376f7,#4015d0);
+  }

@@ -12,22 +12,22 @@
         </div>    
         <ul class="nav-menu">
             <li>
-                <a class="nav-links nav2-links" routerLink="/courses">الدورات</a>
+                <a class="nav-links nav2-links" routerLink="/courses">{{"Navbar.Courses" | translate}}</a>
             </li>
             <li>
-                <a class="nav-links nav2-links" routerLink="/videores">المصادر المجانية</a>
+                <a class="nav-links nav2-links" routerLink="/videores">{{"Navbar.Resources" | translate}}</a>
             </li>
             <li>
-                <a class="nav-links nav2-links" routerLink="/events/allevents">الفعاليات</a>
+                <a class="nav-links nav2-links" routerLink="/events/allevents">{{"Navbar.Events" | translate}}</a>
             </li>
             <li>
-                <a class="nav-links nav2-links" routerLink="/alumni">الخريجين</a>
+                <a class="nav-links nav2-links" routerLink="/alumni">{{"Navbar.Alumni" | translate}}</a>
             </li>
             <li>
-                <a class="nav-links nav2-links" routerLink="/blog">المدونه</a>
+                <a class="nav-links nav2-links" routerLink="/blog">{{"Navbar.blog" | translate}}</a>
             </li>
             <li>
-                <a class="nav-links nav-links-btn nav2-links-btn" routerLink="/login">تسجيل دخول</a>
+                <a class="nav-links nav-links-btn nav2-links-btn" routerLink="/login">{{"Navbar.Log" | translate}}</a>
             </li>
         </ul>  
     </div>     
@@ -44,17 +44,17 @@
                     </p>
                     <span class="text-muted">{{event.date}}</span>
                     <br>
-                    <button><a routerLink="/register">احجز مقعدك مجاناً</a></button>
+                    <button><a routerLink="/register">{{"events.bookNow" | translate}}</a></button>
                 </div>
                 <div class="col-lg-6">
                     <img src="./../../../../assets/imgs/{{event.cover}}" alt="">
-                    <span class="img-san">معاني الألوان</span>
+                    <span class="img-san">{{"events.colors" | translate}}</span>
                 </div>
             </div>
         </div>
 
         <div class="event-speakers">
-            <h2>المتحدثون</h2>
+            <h2>{{"events.speakers" | translate}}</h2>
             <div class="row">
                 <div class="col-md-6 col-lg-6" *ngFor="let speaker of event.speakers">
                     <img src="./../../../../assets/imgs/{{speaker.cover}}" alt="">
@@ -69,44 +69,45 @@
 
 <div class="start-now">
     <div class="start-now-bg">
-        <div class="col-6">
-            <h3>تُقدم وسيلة مسارات مُصممة خصيصاً لأجلك لتعلم التصميم من البداية حتى الإحترافية </h3>
-            <button><a routerLink="/register">إنشاء حساب</a></button>
+        <div class="container">
+            <h3>{{"Home.start-now" | translate}} </h3>
+            <button><a routerLink="/register">{{"Home.start-nowbtn" | translate}}</a></button>
         </div>
     </div>
 </div>   
+
 <div class="footer">
     <div class="container">
         <div class="row first-footer">
             <div class="col-sm-4 col-md-3 col-lg-3">
                 <ul>
-                    <li><a routerLink="/courses">الدورات</a></li>
-                    <li><a routerLink="/events/allevents">الفعاليات</a></li>
-                    <li><a routerLink="/alumni">الخريجون</a></li>
+                    <li><a routerLink="/courses">{{"Navbar.Courses" | translate}}</a></li>
+                    <li><a routerLink="/events/allevents">{{"Navbar.Events" | translate}}</a></li>
+                    <li><a routerLink="/alumni">{{"Navbar.Alumni" | translate}}</a></li>
                 </ul>
             </div>
             <div class="col-sm-4 col-md-3 col-lg-3">
                 <ul>
-                    <li><a routerLink="/blog">المدونة</a></li>
-                    <li><a routerLink="/videores">المصادر المجانية</a></li>
-                    <li><a routerLink="/soundres">تسجيلات صوتية</a></li>
+                    <li><a routerLink="/blog">{{"Navbar.blog" | translate}}</a></li>
+                    <li><a routerLink="/videores">{{"Navbar.Resources" | translate}}</a></li>
+                    <li><a routerLink="/soundres">{{"Footer.Audio" | translate}}</a></li>
                 </ul>                    
             </div>
             <div class="col-sm-4 col-md-3 col-lg-3">
                 <ul>
                     <li><a routerLink="/contact">{{"Footer.Contact" | translate}}</a></li>
-                    <li><a routerLink="/questions">الاسئلة الشائعة</a></li>
-                    <li><a routerLink="/privacy">الخصوصية</a></li>
-                </ul>                    
+                    <li><a routerLink="/questions">{{"Footer.questions" | translate}}</a></li>
+                    <li><a routerLink="/privacy">{{"Footer.privacy" | translate}}</a></li>
+                </ul>                        
             </div>
             <div class="col-sm-4 col-md-3 col-lg-3">
-                <span>وسائل الدفع</span>
+                <span>{{"Footer.payment" | translate}}</span>
                 <ul class="img-list">
-                    <li><img src="../../../../assets/imgs/paypal.svg" alt="paypal"></li>
-                    <li><img src="../../../../assets/imgs/visa.svg" alt="visa"></li>
-                    <li><img src="../../../../assets/imgs/mastercard.svg" alt="mastercard"></li>
+                    <li><img src="../../../../../assets/imgs/paypal.svg" alt=""></li>
+                    <li><img src="../../../../../assets/imgs/visa.svg" alt=""></li>
+                    <li><img src="../../../../../assets/imgs/mastercard.svg" alt=""></li>
                 </ul> 
-                <a href="#">إبلاغ الدفع</a>                   
+                <a href="#">{{"Footer.payment2" | translate}}</a>                   
             </div>
         </div>
         <div class="last-footer">

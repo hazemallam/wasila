@@ -52,9 +52,8 @@ msaapPlaylist: Track[] = [
   ngOnInit(): void {
 
     setTimeout(() => {
-      // this.loginService.logout()
       this.router.navigate(['/soundres'])
-    }, 300000); // Activate after 5 minutes.
+    }, 300);
     if (!localStorage.getItem('foo')) {
       localStorage.setItem('foo', 'no reload')
       location.reload()

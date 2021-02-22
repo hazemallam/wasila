@@ -5,7 +5,7 @@ import { Subscription } from 'rxjs';
 import { Router } from '@angular/router';
 
 
-// import * as $ from 'jquery';
+
 @Component({
   selector: 'app-alumni',
   templateUrl: './alumni.component.html',
@@ -22,9 +22,8 @@ export class AlumniComponent implements OnInit {
 
     
     setTimeout(() => {
-      // this.loginService.logout()
       this.router.navigate(['/alumni'])
-    }, 300); // Activate after 5 minutes.
+    }, 300); 
     if (!localStorage.getItem('foo2')) {
       localStorage.setItem('foo2', 'no reload')
       location.reload()
@@ -41,10 +40,6 @@ export class AlumniComponent implements OnInit {
         menuLinks.classList.toggle('active');
     });
     }
-    // (<any>$('.main-carousel')).flickity({
-    //     cellAlign: 'right',
-    //     contain: true
-    //   });
 
       this.subscribtion= this.alumService.getAllAlumni().subscribe(
         (response)=>{

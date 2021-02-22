@@ -299,18 +299,27 @@
 .event-speakers p {
     font-family: Helvetica-ARlight;
 }
+
 .start-now {
     margin-top: calc(1.78571vw + 34.28571px)!important;
 }
 
 .start-now-bg {
-    background-image: url(./../../../../assets/imgs/cta@2x.jpg);
+    background-image: url(../../../../assets/imgs/cta@2x.jpg);
     background-position: 50%;
     color: #fff;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 80px 0;
 }
+
+.start-now h3 {
+    font-size: calc(.80357vw + 27.42857px);
+    max-width: 600px;
+    text-shadow: 0 0 1px rgba(0,0,0,.4);
+    margin-bottom: .5em;
+}
+
 .start-now button {
     background: linear-gradient(90deg,#ede020,#ffba00);
     border: 0;

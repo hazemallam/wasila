@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import * as $ from 'jquery';
 
@@ -9,7 +10,7 @@ import * as $ from 'jquery';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(public translate: TranslateService) { }
+  constructor(public translate: TranslateService, private router: Router) { }
 
   ngOnInit(): void {
     const menu = document.querySelector('#mobile-menu');
@@ -20,12 +21,17 @@ export class HomeComponent implements OnInit {
         menuLinks.classList.toggle('active');
     });
     }
-    
 
-    // (<any>$('.main-carousel')).flickity({
-    //     cellAlign: 'right',
-    //     contain: true
-    // });
+    setTimeout(() => {
+      this.router.navigate(['/home'])
+    }, 300); 
+    if (!localStorage.getItem('foo2')) {
+      localStorage.setItem('foo2', 'no reload')
+      location.reload()
+    } else {
+      localStorage.removeItem('foo2')
+    }
+    
   }
   auth():boolean{
      let value =  localStorage.getItem('TestToken')? true :false;

@@ -124,7 +124,8 @@
         "sub2": "6 months subscription",
         "sub3": "9 months subscription",
         "subOr": "instead of",
-        "subNow": "Subscribe now"
+        "subNow": "Subscribe now",
+        "miniCoursesTitle": "Courses"
     },
     "AudioRes": {
         "audioTitle": "Audio Recordings",
@@ -262,5 +263,17 @@
         "miniCourses": "Mini Courses",
         "moreCourse": "All Mini Courses",
         "lastComments": "Latest comments"
+    },
+    "events": {
+        "mainTilte1": "The hidden design ....",
+        "mainTilte2": "Modifications that the customer does not see",
+        "eventPlace": "American University - Cairo",
+        "eventMore": "View event details",
+        "events": "Events",
+        "Previousevents": "Previous Events",
+        "startNow": "It offers a disengaged paths to learn design from beginner to professional",
+        "bookNow": "Reserve your seat for free",
+        "colors": "Meanings of colors",
+        "speakers": "Speakers"
     }
 }

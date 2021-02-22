@@ -12,22 +12,22 @@
         </div>    
         <ul class="nav-menu">
             <li>
-                <a class="nav-links" routerLink="/courses">الدورات</a>
+                <a class="nav-links" routerLink="/courses">{{"Navbar.Courses" | translate}}</a>
             </li>
             <li>
-                <a class="nav-links" routerLink="/videores">المصادر المجانية</a>
+                <a class="nav-links" routerLink="/videores">{{"Navbar.Resources" | translate}}</a>
             </li>
             <li>
-                <a class="nav-links" routerLink="/events/allevents">الفعاليات</a>
+                <a class="nav-links" routerLink="/events/allevents">{{"Navbar.Events" | translate}}</a>
             </li>
             <li>
-                <a class="nav-links" routerLink="/alumni">الخريجين</a>
+                <a class="nav-links" routerLink="/alumni">{{"Navbar.Alumni" | translate}}</a>
             </li>
             <li>
-                <a class="nav-links" routerLink="/blog">المدونه</a>
+                <a class="nav-links" routerLink="/blog">{{"Navbar.blog" | translate}}</a>
             </li>
             <li>
-                <a class="nav-links nav-links-btn" routerLink="/login">تسجيل دخول</a>
+                <a class="nav-links nav-links-btn" routerLink="/login">{{"Navbar.Log" | translate}}</a>
             </li>
         </ul>  
     </div>     
@@ -39,13 +39,13 @@
                 <div class="col-md-6 col-lg-6 header">
                     <div class="header-info">
                         <span class="text-muted">15 Jul 2020</span>
-                        <h4>التصميم الخفى....
+                        <h4>{{"events.mainTilte1" | translate}}
                             <br>
-                            التعديلات التى لا يراها العميل
+                            {{"events.mainTilte2" | translate}}
                         </h4>
-                        <span class="text-muted">الجامعة الأمريكية - القاهرة</span>
+                        <span class="text-muted">{{"events.eventPlace" | translate}}</span>
                         <br>
-                        <button><a routerLink="/register">عرض تفاصيل الفعالية</a></button>
+                        <button><a routerLink="/register">{{"events.eventMore" | translate}}</a></button>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-6 header-image">
@@ -59,13 +59,13 @@
                 <div class="col-md-6 col-lg-6 header">
                     <div class="header-info">
                         <span class="text-muted">15 Jul 2020</span>
-                        <h4>التصميم الخفى....
+                        <h4>{{"events.mainTilte1" | translate}}
                             <br>
-                            التعديلات التى لا يراها العميل
+                            {{"events.mainTilte2" | translate}}
                         </h4>
-                        <span class="text-muted">الجامعة الأمريكية - القاهرة</span>
+                        <span class="text-muted">{{"events.eventPlace" | translate}}</span>
                         <br>
-                        <button><a routerLink="/register">عرض تفاصيل الفعالية</a></button>
+                        <button><a routerLink="/register">{{"events.eventMore" | translate}}</a></button>
                     </div>
                 </div>
             </div>
@@ -75,10 +75,10 @@
     <div class="all-events">
         <div class="container">
             <div>
-            <h3>الفعاليات</h3>
+            <h3>{{"events.events" | translate}}</h3>
             <!-- <h3 *ngIf="event.year == 2021; else elseBlock">الفعاليات الحالية {{event.year}}</h3> -->
             <ng-template #elseBlock>
-                <h3>الغعاليات السابقة</h3>
+                <h3>{{"events.Previousevents" | translate}}</h3>
             </ng-template>
             <div class="row">
                 <div class="col-sm-6 col-md-4 col-lg-4" *ngFor="let e of events">
@@ -100,7 +100,7 @@
         <div class="start-now">
             <div class="start-now-bg st-now2" style="padding: 45px 0;border-radius: 30px;">
                 <div class="col-6">
-                    <h3 style="margin-right: 50px;">تُقدم وسيلة مسارات مُصممة خصيصاً لأجلك لتعلم التصميم من البداية حتى الإحترافية </h3>
+                    <h3 style="margin-right: 50px;">{{"events.startNow" | translate}} </h3>
                 </div>
             </div>
         </div> 
@@ -111,33 +111,33 @@
         <div class="row first-footer">
             <div class="col-sm-4 col-md-3 col-lg-3">
                 <ul>
-                    <li><a routerLink="/courses">الدورات</a></li>
-                    <li><a routerLink="/events/allevents">الفعاليات</a></li>
-                    <li><a routerLink="/alumni">الخريجون</a></li>
+                    <li><a routerLink="/courses">{{"Navbar.Courses" | translate}}</a></li>
+                    <li><a routerLink="/events/allevents">{{"Navbar.Events" | translate}}</a></li>
+                    <li><a routerLink="/alumni">{{"Navbar.Alumni" | translate}}</a></li>
                 </ul>
             </div>
             <div class="col-sm-4 col-md-3 col-lg-3">
                 <ul>
-                    <li><a routerLink="/blog">المدونة</a></li>
-                    <li><a routerLink="/videores">المصادر المجانية</a></li>
-                    <li><a routerLink="/soundres">تسجيلات صوتية</a></li>
+                    <li><a routerLink="/blog">{{"Navbar.blog" | translate}}</a></li>
+                    <li><a routerLink="/videores">{{"Navbar.Resources" | translate}}</a></li>
+                    <li><a routerLink="/soundres">{{"Footer.Audio" | translate}}</a></li>
                 </ul>                    
             </div>
             <div class="col-sm-4 col-md-3 col-lg-3">
                 <ul>
                     <li><a routerLink="/contact">{{"Footer.Contact" | translate}}</a></li>
-                    <li><a routerLink="/questions">الاسئلة الشائعة</a></li>
-                    <li><a routerLink="/privacy">الخصوصية</a></li>
-                </ul>                    
+                    <li><a routerLink="/questions">{{"Footer.questions" | translate}}</a></li>
+                    <li><a routerLink="/privacy">{{"Footer.privacy" | translate}}</a></li>
+                </ul>                        
             </div>
             <div class="col-sm-4 col-md-3 col-lg-3">
-                <span>وسائل الدفع</span>
+                <span>{{"Footer.payment" | translate}}</span>
                 <ul class="img-list">
-                    <li><img src="../../../../assets/imgs/paypal.svg" alt="paypal"></li>
-                    <li><img src="../../../../assets/imgs/visa.svg" alt="visa"></li>
-                    <li><img src="../../../../assets/imgs/mastercard.svg" alt="mastercard"></li>
+                    <li><img src="../../../../assets/imgs/paypal.svg" alt=""></li>
+                    <li><img src="../../../../assets/imgs/visa.svg" alt=""></li>
+                    <li><img src="../../../../assets/imgs/mastercard.svg" alt=""></li>
                 </ul> 
-                <a href="#">إبلاغ الدفع</a>                   
+                <a href="#">{{"Footer.payment2" | translate}}</a>                   
             </div>
         </div>
         <div class="last-footer">

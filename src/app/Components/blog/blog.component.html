@@ -40,7 +40,7 @@
             <div class="col-lg-6" *ngFor="let bl of blogs.slice(0,2)">
                 <a routerLink="/article" >
                     <div class="card" style="width: 100%;">
-                        <img src = {{bl.image}} class="card-img-top" alt="">
+                        <img src = {{bl.image}} class="card-img-top" alt="" style="border-radius: 30px;">
                         <div class="card-body">
                         <div>
                             <img src={{bl.authorimage}} alt="">
@@ -66,7 +66,7 @@
                 <h3>{{"blog.mostRead" | translate}}</h3>
                 <a routerLink="/article" *ngFor="let blo of blogs">
                     <div class="card" style="width: 82%;">
-                        <img src={{blo.image}} class="card-img-top" alt="">
+                        <img src={{blo.image}} class="card-img-top" alt="" style="border-radius: 30px;">
                         <div class="card-body">
                         <div>
                             <img src={{blo.authorimage}} alt="">
@@ -99,14 +99,14 @@
                         </span>
                     </div>
                 </div>
-                <button><a routerLink="/courses">{{"blog.moreCourse" | translate}}</a></button>
+                <button><a routerLink="/minicourses">{{"blog.moreCourse" | translate}}</a></button>
                 <br>
                 <br>
                 <br>
                 <br>
                 <h3>{{"blog.lastComments" | translate}}</h3>
                 <div class="side-comment" style="margin-bottom: 5px;" *ngFor="let com of comments">
-                    <img src={{com.image}} alt="" style="width: 40px;border-radius: 50%;">
+                    <img src={{com.image}} alt="" style="width: 40px;border-radius: 50%; margin-left: 10px;">
                     <span>{{com.name}}</span>
                     <p class="text-muted">{{com.text}}</p>
                 </div>

@@ -22,9 +22,8 @@ export class VideoResourcesComponent implements OnInit{
 
     
     setTimeout(() => {
-      // this.loginService.logout()
       this.router.navigate(['/videores'])
-    }, 300000); // Activate after 5 minutes.
+    }, 300);
     if (!localStorage.getItem('foo1')) {
       localStorage.setItem('foo1', 'no reload')
       location.reload()
