@@ -52,5 +52,10 @@ export class AlumniComponent implements OnInit {
   
       console.log("After subscribe");
    }
+   auth():boolean{
+    let value =  localStorage.getItem('UserToken')? true :false;
+   return value;
+ }
+
 }
 

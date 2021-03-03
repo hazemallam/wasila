@@ -28,7 +28,7 @@
                 <li>
                     <a class="nav-links nav2-links" routerLink="/blog">{{"Navbar.blog" | translate}}</a>
                 </li>
-                <li>
+                <li *ngIf="!auth()">
                     <a class="nav-links nav-links-btn nav2-links-btn" routerLink="/login">{{"Navbar.Log" | translate}}</a>
                 </li>
             </ul>  

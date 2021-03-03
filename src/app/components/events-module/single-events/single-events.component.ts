@@ -36,5 +36,10 @@ export class SingleEventsComponent implements OnInit {
 
     }
   }
+  auth():boolean{
+    let value =  localStorage.getItem('UserToken')? true :false;
+   return value;
+ }
+
 
 }

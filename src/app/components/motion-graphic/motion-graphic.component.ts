@@ -20,5 +20,10 @@ export class MotionGraphicComponent implements OnInit {
     } 
    
   }
+  auth():boolean{
+    let value =  localStorage.getItem('UserToken')? true :false;
+   return value;
+ }
+
 
 }

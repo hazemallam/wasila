@@ -53,6 +53,10 @@ export class VideoResourcesComponent implements OnInit{
 
   }
 
+  auth():boolean{
+    let value =  localStorage.getItem('UserToken')? true :false;
+   return value;
+ }
 
 
 

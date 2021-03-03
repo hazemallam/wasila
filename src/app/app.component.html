@@ -4,4 +4,9 @@
         <button (click)="translate.use('ar')" type="button" class="btn btn-primary">عربي</button>
         <button (click)="translate.use('en')" type="button" class="btn btn-primary">English</button>
       </div>
+      <div *ngIf="auth()" class="userlogout" (click)="logout()">
+        <div class="logout">
+          <h6>Logout - خروج</h6>
+        </div>
+      </div>
 </div>
