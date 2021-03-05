@@ -44,7 +44,7 @@
 <div class="courses">
     <div class="container">
         <div class="row">
-            <div class="col-md-2 col-lg-3 col-sm-6" *ngFor="let cor of miniCourses | paginate: { itemsPerPage: 8, currentPage: p, totalItems: 20}">
+            <div class="col-md-2 col-lg-3 col-sm-6" *ngFor="let cor of miniCourses | paginate: { itemsPerPage: 8, currentPage: p, totalItems: 20}" data-aos="fade-up">
                 <a href="#">
                     <div class="card" style="width: 100%;">
                         <img src = {{cor.image}} class="card-img-top" alt="">

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import {RegisterService } from 'src/app/Services/Register/register.service';
 import { Register } from 'src/app/ViewModels/Register/register';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-register',
@@ -13,6 +14,7 @@ export class RegisterComponent implements OnInit {
   constructor(private router: Router , private userRegisterserve:RegisterService ) { 
     this.NewUser={name:"", email:"",password:""} }
   ngOnInit(): void {
+    AOS.init();
   }
   
   addUsersReg(){

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { EventServiceService } from 'src/app/Services/Events/event-service.service';
 import { IEvent } from 'src/app/ViewModels/ievent';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-events',
@@ -30,6 +31,7 @@ export class EventsComponent implements OnInit {
     })
     }
     
+    AOS.init();
   }
 
   auth():boolean{

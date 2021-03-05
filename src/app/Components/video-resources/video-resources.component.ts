@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { VideoResourcesServiceService } from 'src/app/Services/VideoResources/video-resources-service.service';
 import { VideoResourcesAlbumsInterface, VideoResourcesInterface } from 'src/app/ViewModels/VideoResources/video-resources-interface';
+import * as AOS from 'aos';
+
 @Component({
   selector: 'app-video-resources',
   templateUrl: './video-resources.component.html',
@@ -39,7 +41,7 @@ export class VideoResourcesComponent implements OnInit{
     menu.addEventListener('click', function(){
       menu.classList.toggle('is-active');
       menuLinks.classList.toggle('active');
-  });
+    });
     }
 
       this.subscription = this.video.getAllVideoResources().subscribe(
@@ -50,6 +52,8 @@ export class VideoResourcesComponent implements OnInit{
         },
         (err)=>{console.log(err)}
       )
+
+    AOS.init();
 
   }
 

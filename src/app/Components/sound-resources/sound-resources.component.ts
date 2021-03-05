@@ -5,6 +5,7 @@ import { Subscription } from 'rxjs';
 import { SoundResourcesServiceService } from 'src/app/Services/SoundResources/sound-resources-service.service';
 import { SoundResourcesInterface } from 'src/app/ViewModels/SoundResources/sound-resources-interface';
 import { Track } from 'ngx-audio-player'; 
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-sound-resources',
@@ -80,6 +81,7 @@ msaapPlaylist: Track[] = [
         (err)=>{console.log(err)}
       )
       
+    AOS.init();
   }
 
   auth():boolean{

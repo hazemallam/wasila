@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import * as $ from 'jquery';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-home',
@@ -31,6 +32,8 @@ export class HomeComponent implements OnInit {
     } else {
       localStorage.removeItem('foo2')
     }
+
+    AOS.init();
     
   }
   auth():boolean{

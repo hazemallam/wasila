@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Minicourse} from 'src/app/ViewModels/minicourse'
 import {MiniCoursesService} from 'src/app/Services/mini-courses.service'
 import { Subscription } from 'rxjs';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-mini-courses',
@@ -33,6 +34,8 @@ export class MiniCoursesComponent implements OnInit {
       },
       (err)=>{console.log(err)}
     )
+
+    AOS.init();
     
   }
   auth():boolean{

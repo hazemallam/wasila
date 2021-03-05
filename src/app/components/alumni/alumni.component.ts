@@ -3,7 +3,7 @@ import { AlumniModel } from 'src/app/ViewModels/alumni-model';
 import { AlumniService } from 'src/app/Services/alumni.service';
 import { Subscription } from 'rxjs';
 import { Router } from '@angular/router';
-
+import * as AOS from 'aos';
 
 
 @Component({
@@ -51,6 +51,8 @@ export class AlumniComponent implements OnInit {
       );
   
       console.log("After subscribe");
+
+      AOS.init();
    }
    auth():boolean{
     let value =  localStorage.getItem('UserToken')? true :false;

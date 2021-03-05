@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CoursesService } from 'src/app/Services/Courses/courses.service'
 import { Icourses } from 'src/app/ViewModels/icourses';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-graphic-design',
@@ -29,6 +30,8 @@ export class GraphicDesignComponent implements OnInit {
       console.log(error)
     })
     }
+
+    AOS.init();
     
   }
   auth():boolean{
