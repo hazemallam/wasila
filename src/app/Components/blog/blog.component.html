@@ -33,7 +33,7 @@
     </div>     
 </nav>
 
-<div class="blog-head">
+<div class="blog-head" data-aos="fade-up">
     <div class="container">
         <h1>{{"blog.blogTitle" | translate}}</h1>
         <div class="row">
@@ -62,7 +62,7 @@
 <div class="blog-body">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6" data-aos="fade-left" data-aos-offset="400" data-aos-easing="ease-in-sine">
                 <h3>{{"blog.mostRead" | translate}}</h3>
                 <a routerLink="/article" *ngFor="let blo of blogs">
                     <div class="card" style="width: 82%;">
@@ -85,7 +85,7 @@
                 <button><a href="#">{{"blog.more" | translate}}</a></button>
             </div>
             <div class="col-lg-1"></div>
-            <div class="col-lg-5">
+            <div class="col-lg-5" data-aos="fade-up" data-aos-offset="500" data-aos-easing="ease-in-sine">
                 <h3 class="um-1">{{"blog.miniCourses" | translate}}</h3>
                 <div class="side-card" *ngFor="let cor of courses">
                     <div class="row" routerLink="/article">
@@ -105,7 +105,7 @@
                 <br>
                 <br>
                 <h3>{{"blog.lastComments" | translate}}</h3>
-                <div class="side-comment" style="margin-bottom: 5px;" *ngFor="let com of comments">
+                <div class="side-comment" style="margin-bottom: 5px;" *ngFor="let com of comments" data-aos="fade-up" data-aos-offset="600" data-aos-easing="ease-in-sine">
                     <img src={{com.image}} alt="" style="width: 40px;border-radius: 50%; margin-left: 10px;">
                     <span>{{com.name}}</span>
                     <p class="text-muted">{{com.text}}</p>

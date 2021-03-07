@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-threed-art',
@@ -18,6 +19,8 @@ export class ThreedArtComponent implements OnInit {
         menuLinks.classList.toggle('active');
     });
     }
+
+    AOS.init();
     
   }
   auth():boolean{

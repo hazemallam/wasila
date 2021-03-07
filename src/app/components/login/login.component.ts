@@ -5,6 +5,7 @@ import { Subscription } from 'rxjs';
 import { LoginService } from 'src/app/Services/Login/login.service';
 import { RegisterService } from 'src/app/Services/Register/register.service';
 import { Register } from "src/app/ViewModels/Register/register";
+import * as AOS from 'aos';
 
 
 @Component({
@@ -41,6 +42,8 @@ export class LoginComponent implements OnInit {
       Email: ['', [Validators.required, Validators.email, Validators.minLength(7)]]
       , Password: ['', [Validators.required, Validators.minLength(6)]]
     });
+
+    AOS.init();
 
   }
   checkLogin()

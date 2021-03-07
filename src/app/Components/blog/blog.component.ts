@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { BlogServiceService } from 'src/app/Services/Blog/blog-service.service';
 import { BlogInterface, CommentsInterface, CoursesInterface } from 'src/app/ViewModels/blog/blog-interface';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-blog',
@@ -55,6 +56,7 @@ export class BlogComponent implements OnInit {
       (err)=>{console.log(err)}
     )
    
+    AOS.init();
   }
     
   auth():boolean{

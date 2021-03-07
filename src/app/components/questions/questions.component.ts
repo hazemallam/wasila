@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-questions',
@@ -19,6 +20,8 @@ export class QuestionsComponent implements OnInit {
       menuLinks.classList.toggle('active');
   });
     }
+
+    AOS.init();
   }
   auth():boolean{
     let value =  localStorage.getItem('UserToken')? true :false;
