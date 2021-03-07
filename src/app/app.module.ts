@@ -32,6 +32,7 @@ import { NgxAudioPlayerModule } from 'ngx-audio-player';
 import { ArticleComponent } from './Components/article//article.component';
 import { MiniCoursesComponent } from './Components/mini-courses/mini-courses.component';
 import { EventsModuleModule } from './Components/events-module/events-module.module';
+import {NgxPayPalModule} from 'ngx-paypal';
 
 
 @NgModule({
@@ -74,7 +75,8 @@ import { EventsModuleModule } from './Components/events-module/events-module.mod
     }) ,
     ReactiveFormsModule ,
     NgxAudioPlayerModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    NgxPayPalModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

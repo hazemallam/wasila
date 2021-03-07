@@ -277,10 +277,14 @@
             </div>
             <div class="col-sm-4 col-md-3 col-lg-3">
                 <span>{{"Footer.payment" | translate}}</span>
-                <ul class="img-list">
-                    <li><img src="../../../assets/imgs/paypal.svg" alt=""></li>
+                <ul class="img-list" id="payment" #payPalRef>
+                    <!-- <li><img src="../../../assets/imgs/paypal.svg" alt=""></li>
                     <li><img src="../../../assets/imgs/visa.svg" alt=""></li>
-                    <li><img src="../../../assets/imgs/mastercard.svg" alt=""></li>
+                    <li><img src="../../../assets/imgs/mastercard.svg" alt=""></li> -->
+                    <script>
+                        paypal.Buttons().render('#payment');
+                        // This function displays Smart Payment Buttons on your web page.
+                      </script>
                 </ul> 
                 <a href="#">{{"Footer.payment2" | translate}}</a>                   
             </div>
