@@ -1,8 +1,6 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-// import * as $ from 'jquery';
-// import * as $ from 'jquery';
 import * as AOS from 'aos';
 
 @Component({
@@ -11,11 +9,12 @@ import * as AOS from 'aos';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
+  // paypal:any;
   constructor(public translate: TranslateService, private router: Router) { }
+ 
   @ViewChild('payPalRef', {static : true}) private payPalRef? : ElementRef;
   ngOnInit(): void {
-    // console.log(window.paypal)
+    console.log(window.paypal)
     window.paypal.Buttons({
       style:{
         layout:'horizontal',
@@ -42,6 +41,7 @@ export class HomeComponent implements OnInit {
       }
 
     }).render(this.payPalRef?.nativeElement)
+    
     const menu = document.querySelector('#mobile-menu');
     const menuLinks = document.querySelector('.nav-menu');
     if(menu && menuLinks){
@@ -66,7 +66,6 @@ export class HomeComponent implements OnInit {
   }
 
   
-
 
   auth():boolean{
      let value =  localStorage.getItem('UserToken')? true :false;
