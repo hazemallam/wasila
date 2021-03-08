@@ -1,12 +1,9 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-<<<<<<< HEAD
 // import * as $ from 'jquery';
-=======
-import * as $ from 'jquery';
+//import * as $ from 'jquery';
 import * as AOS from 'aos';
->>>>>>> 15fd063ddf9853061a3c5619a3fb9dc42da9fe8d
 
 @Component({
   selector: 'app-home',
@@ -45,6 +42,7 @@ export class HomeComponent implements OnInit {
       }
 
     }).render(this.payPalRef?.nativeElement)
+    
     const menu = document.querySelector('#mobile-menu');
     const menuLinks = document.querySelector('.nav-menu');
     if(menu && menuLinks){
