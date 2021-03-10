@@ -4,7 +4,7 @@
         <button (click)="translate.use('ar')" type="button" class="btn btn-primary">عربي</button>
         <button (click)="translate.use('en')" type="button" class="btn btn-primary">English</button>
       </div>
-      <img *ngIf="auth()" class="user-avatar" src="../assets/imgs/user.jpg" alt="">
+      <img *ngIf="auth()" routerLink="/userprofile" class="user-avatar" src="../assets/imgs/user.jpg" alt="">
       <div *ngIf="auth()" class="userlogout" (click)="logout()">
         <div class="logout">
           <h6>Logout - خروج</h6>

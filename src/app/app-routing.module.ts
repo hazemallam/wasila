@@ -20,6 +20,7 @@ import { AdminGuard } from './guards/admin.guard';
 import {ArticleComponent} from './Components/article/article.component'
 import {MiniCoursesComponent} from './Components/mini-courses/mini-courses.component'
 import { AuthGuard } from './guards/auth.guard';
+import { UserProfileComponent } from './Components/user-profile/user-profile.component';
 
 
 const routes: Routes = [
@@ -42,6 +43,7 @@ const routes: Routes = [
   {path:'admin', component:NotFoundComponent, canActivate:[AdminGuard]},
   {path : 'article', component: ArticleComponent},
   {path : 'minicourses', component: MiniCoursesComponent},
+  {path: 'userprofile', component: UserProfileComponent},
   {path:'', redirectTo:'/home', pathMatch:'full'}
 
 ]

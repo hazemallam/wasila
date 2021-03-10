@@ -33,6 +33,7 @@ import { ArticleComponent } from './Components/article//article.component';
 import { MiniCoursesComponent } from './Components/mini-courses/mini-courses.component';
 import { EventsModuleModule } from './Components/events-module/events-module.module';
 import {NgxPayPalModule} from 'ngx-paypal';
+import { UserProfileComponent } from './Components/user-profile/user-profile.component';
 
 
 @NgModule({
@@ -55,7 +56,8 @@ import {NgxPayPalModule} from 'ngx-paypal';
     SoundResourcesComponent,
     NotFoundComponent,
     ArticleComponent,
-    MiniCoursesComponent
+    MiniCoursesComponent,
+    UserProfileComponent
 
   ],
   imports: [

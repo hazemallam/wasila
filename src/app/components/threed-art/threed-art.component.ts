@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as AOS from 'aos';
+import { CartService } from 'src/app/Services/cart/cart.service';
+import { Icart } from 'src/app/ViewModels/icart';
 
 @Component({
   selector: 'app-threed-art',
@@ -7,8 +9,8 @@ import * as AOS from 'aos';
   styleUrls: ['./threed-art.component.scss']
 })
 export class ThreedArtComponent implements OnInit {
-
-  constructor() { }
+  cart:Icart = {};
+  constructor(private userCart: CartService) { }
 
   ngOnInit(): void {
     const menu = document.querySelector('#mobile-menu');
@@ -22,6 +24,11 @@ export class ThreedArtComponent implements OnInit {
 
     AOS.init();
     
+  }
+  addToCart(image:string, name:string){
+    let email = localStorage.getItem('UserToken')
+  this.cart = {name:name, userEmail:email as string, image:image}
+  this.userCart.postToCart(this.cart);
   }
   auth():boolean{
     let value =  localStorage.getItem('UserToken')? true :false;
