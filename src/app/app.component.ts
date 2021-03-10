@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +10,10 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./app.component.scss', './app.component.css']
  
 })
-export class AppComponent {
+export class AppComponent  implements OnInit{
   title = 'wasila-angular';
 
-  constructor(public translate: TranslateService, private router : Router){
+  constructor(public translate: TranslateService, private router : Router, private spinnerService: NgxSpinnerService){
 
   }
 
@@ -25,5 +27,16 @@ export class AppComponent {
    console.log('logout')
     this.router.navigate(['/login'])
  }
+
+ ngOnInit() {
+  this.spinner();
+  }
+
+  spinner(): void {
+    this.spinnerService.show();
+    setTimeout(() => {
+      this.spinnerService.hide();
+    }, 4000);
+  }
 
 }
