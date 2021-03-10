@@ -135,11 +135,13 @@
         "show": "Show me",
         "search1": "All",
         "search2": "Motion Graphics",
-        "search3": "Graphic Design"
+        "search3": "Graphic Design",
+        "audioBest": "Best Recordings"
     },
     "VideoRes": {
         "VideoTitle": "Educational Videos",
-        "VideoTime": "10 videos"
+        "VideoTime": "10 videos",
+        "videoBest": "Best Videos"
     },
     "contact": {
         "conTitle": "Stay in touch with us to keep up with all that is new",
