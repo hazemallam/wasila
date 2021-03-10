@@ -3,6 +3,7 @@ import { Subscription } from 'rxjs';
 import { BlogServiceService } from 'src/app/Services/Blog/blog-service.service';
 import { BlogInterface, CommentsInterface, CoursesInterface } from 'src/app/ViewModels/blog/blog-interface';
 import * as AOS from 'aos';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-blog',
@@ -20,9 +21,20 @@ export class BlogComponent implements OnInit {
   
   constructor(private blog : BlogServiceService,
     private course : BlogServiceService,
-    private comment : BlogServiceService) { }
+    private comment : BlogServiceService,
+    private router: Router) { }
 
   ngOnInit(): void {
+
+    setTimeout(() => {
+      this.router.navigate(['/blog'])
+    }, 300); 
+    if (!localStorage.getItem('foo2')) {
+      localStorage.setItem('foo2', 'no reload')
+      location.reload()
+    } else {
+      localStorage.removeItem('foo2')
+    }
 
     const menu = document.querySelector('#mobile-menu');
     const menuLinks = document.querySelector('.nav-menu');

@@ -75,7 +75,7 @@
     <div class="start-now-bg">
         <div class="container">
             <h3>{{"Home.start-now" | translate}} </h3>
-            <button><a routerLink="/register">{{"Home.start-nowbtn" | translate}}</a></button>
+            <button *ngIf="!auth()"><a routerLink="/register">{{"Home.start-nowbtn" | translate}}</a></button>
         </div>
     </div>
 </div>

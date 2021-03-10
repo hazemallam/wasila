@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     console.log(window.paypal)
     window.paypal.Buttons({
-      style:{
+      style:{ 
         layout:'horizontal',
         color:'blue',
         label:'paypal',
@@ -40,7 +40,7 @@ export class HomeComponent implements OnInit {
         });
       }
 
-    }).render(this.payPalRef?.nativeElement)
+    }).render(this.payPalRef?.nativeElement) 
     
     const menu = document.querySelector('#mobile-menu');
     const menuLinks = document.querySelector('.nav-menu');
