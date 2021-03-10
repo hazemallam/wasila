@@ -486,3 +486,27 @@ body {
 .owl-carousel {
     margin-bottom: 15px
 }
+
+.modal-content {
+    background: linear-gradient(90deg, #9376f7, #4015d0);
+    color: #FFF;
+    border: none;
+}
+.modal-header {border-bottom:none;}
+.modal-footer {
+    justify-content: center;
+    border-top: none;
+}
+
+.model-btn {
+    background: linear-gradient(45deg, #ff00de, #ff0078);
+    padding: 7px 16px 9px 16px;
+    border-radius: 30px;
+    box-shadow: 0 4px 17px 3px rgba(72, 31, 210, 0.1);
+    color: #FFF;
+}
+
+.model-btn:hover {
+    background: #FFF;
+    color: #9376f7;
+}
