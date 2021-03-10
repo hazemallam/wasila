@@ -57,6 +57,7 @@ export class LoginComponent implements OnInit {
       if ((this.usersList[i].email === this.NewUser.name) || (this.usersList[i].password === this.NewUser.password)) {
         console.log("done")
         this.router.navigate(['/home']);
+        console.log(`email ${this.NewUser.email}`)
         this.login();
        
       }
@@ -81,7 +82,7 @@ export class LoginComponent implements OnInit {
 
     login(){
       // alert("In Login")
-      this.loginService.login('TestToken');
+      this.loginService.login(this.NewUser.email);
       // this.userloginserve.login(this.NewUser.Email)
     }
   

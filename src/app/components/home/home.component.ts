@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
  
   @ViewChild('payPalRef', {static : true}) private payPalRef? : ElementRef;
   ngOnInit(): void {
-    console.log(window.paypal)
+    // console.log(window.paypal)
     window.paypal.Buttons({
       style:{ 
         layout:'horizontal',

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import * as AOS from 'aos';
+import { CartService } from 'src/app/Services/cart/cart.service';
+import { Icart } from 'src/app/ViewModels/icart';
 
 @Component({
   selector: 'app-concept-art',
@@ -8,8 +10,8 @@ import * as AOS from 'aos';
   styleUrls: ['./concept-art.component.scss']
 })
 export class ConceptArtComponent implements OnInit {
-
-  constructor(private router:Router) { }
+  cart:Icart = {};
+  constructor(private userCart: CartService, private router:Router) { }
 
   ngOnInit(): void {
 
@@ -34,6 +36,11 @@ export class ConceptArtComponent implements OnInit {
 
     AOS.init();
     
+  }
+  addToCart(image:string, name:string){
+    let email = localStorage.getItem('UserToken')
+  this.cart = {name:name, userEmail:email as string, image:image}
+  this.userCart.postToCart(this.cart);
   }
   auth():boolean{
     let value =  localStorage.getItem('UserToken')? true :false;

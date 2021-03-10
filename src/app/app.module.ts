@@ -34,6 +34,7 @@ import { MiniCoursesComponent } from './Components/mini-courses/mini-courses.com
 import { EventsModuleModule } from './Components/events-module/events-module.module';
 import {NgxPayPalModule} from 'ngx-paypal';
 import { NgxSpinnerModule} from 'ngx-spinner';
+import { UserProfileComponent } from './Components/user-profile/user-profile.component';
 
 
 @NgModule({
@@ -56,7 +57,8 @@ import { NgxSpinnerModule} from 'ngx-spinner';
     SoundResourcesComponent,
     NotFoundComponent,
     ArticleComponent,
-    MiniCoursesComponent
+    MiniCoursesComponent,
+    UserProfileComponent
 
   ],
   imports: [

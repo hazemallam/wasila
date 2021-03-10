@@ -3,6 +3,8 @@ import {Minicourse} from 'src/app/ViewModels/minicourse'
 import {MiniCoursesService} from 'src/app/Services/mini-courses.service'
 import { Subscription } from 'rxjs';
 import * as AOS from 'aos';
+import { CartService } from 'src/app/Services/cart/cart.service';
+import { Icart } from 'src/app/ViewModels/icart';
 
 @Component({
   selector: 'app-mini-courses',
@@ -14,9 +16,9 @@ export class MiniCoursesComponent implements OnInit {
   miniCourses : Minicourse[] = []
   subscription : Subscription | null = null;
   p: number = 1;
+  cart:Icart = {};
 
-
-  constructor(private course : MiniCoursesService,) { }
+  constructor(private course : MiniCoursesService, private addCart: CartService) { }
 
   ngOnInit(): void {
     const menu = document.querySelector('#mobile-menu');
@@ -43,5 +45,10 @@ export class MiniCoursesComponent implements OnInit {
    return value;
  }
 
+ addToCart(id:number, name:string, image:string){
+   let email = localStorage.getItem('UserToken')
+  this.cart = {name:name, userEmail:email as string, image:image}
+  this.addCart.postToCart(this.cart);
+ }
 
 }
