@@ -50,7 +50,7 @@
                         <img src = {{cor.image}} class="card-img-top" alt="">
                         <div class="card-body row">
                             <h5 class="card-title">{{cor.name}}</h5>
-                            <h5 class="add-to-cart" (click)="addToCart(cor.id, cor.name, cor.image)">Add to cart</h5>
+                            <button *ngIf="auth()" class="btn-num2" (click)="addToCart(cor.id, cor.name, cor.image)">{{"conceptArt.conceptadd" | translate}}</button>
                         </div>
                     </div>
                 <!-- </a> -->

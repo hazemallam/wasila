@@ -49,8 +49,8 @@
                 <p class="overview-p">
                     {{"graphicDesign.graphicOverview" | translate}} .
                 </p>
-                <button><a routerLink="/register">{{"conceptArt.conceptsets" | translate}}</a></button>
-                <button><a routerLink="/userprofile" (click)="addToCart('../../../assets/imgs/55.jpg', 'الجرافيك ديزاين')">اضافة الى السلة</a></button>
+                <button *ngIf="!auth()"><a routerLink="/register">{{"conceptArt.conceptsets" | translate}}</a></button>
+                <button *ngIf="auth()"><a routerLink="/userprofile" (click)="addToCart('../../../assets/imgs/55.jpg', 'الجرافيك ديزاين')">{{"conceptArt.conceptadd" | translate}}</a></button>
 
                 <p>{{"conceptArt.conceptStart" | translate}} <span>{{"graphicDesign.graphicDate" | translate}}</span></p>
             </div>

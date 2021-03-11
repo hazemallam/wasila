@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { CartService } from 'src/app/Services/cart/cart.service';
 import { Icart } from 'src/app/ViewModels/icart';
@@ -12,7 +13,7 @@ export class UserProfileComponent implements OnInit{
   carts:Icart[] = []
   cartsLoaded$?:Promise<boolean>;
   render:boolean = false
-  constructor(private userCart: CartService, private translate : TranslateService) {
+  constructor(private router: Router, private userCart: CartService, private translate : TranslateService) {
     this.cartsLoaded$ = Promise.resolve(false);
 
    }
@@ -21,6 +22,25 @@ export class UserProfileComponent implements OnInit{
   
 
   ngOnInit() {
+    const menu = document.querySelector('#mobile-menu');
+    const menuLinks = document.querySelector('.nav-menu');
+    if(menu && menuLinks){
+      menu.addEventListener('click', function(){
+        menu.classList.toggle('is-active');
+        menuLinks.classList.toggle('active');
+    });
+    }
+
+    setTimeout(() => {
+      this.router.navigate(['/userprofile'])
+    }, 300); 
+    if (!localStorage.getItem('foo2')) {
+      localStorage.setItem('foo2', 'no reload')
+      location.reload()
+    } else {
+      localStorage.removeItem('foo2')
+    }
+
     this.fetchData();
     // console.log(this.render)
     // this.filterData()
@@ -44,4 +64,9 @@ export class UserProfileComponent implements OnInit{
       })
     })
   }
+
+  auth():boolean{
+    let value =  localStorage.getItem('UserToken')? true :false;
+   return value;
+ }
 }

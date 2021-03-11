@@ -196,7 +196,8 @@
         "conceptpayment2": "Vodafone Cash",
         "conceptpaymentTrans": "Transfer to number: 01012345678",
         "conceptpayment3": "Egypt Bank",
-        "conceptpayment4": "Western Union"
+        "conceptpayment4": "Western Union",
+        "conceptadd": "+ Add to cart"
     },
     "motionGraphic": {
         "motionTitle": "Motion Graphics Course",
