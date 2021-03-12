@@ -6,21 +6,15 @@ export const environment = {
   production: false,
   URL: "http://localhost:3004",
   firebase: {
-    // apiKey: "AIzaSyAfg2gVY1Ky2Z0Wgj6cuHTX5hz1zvZUnkA",
-    // authDomain: "wasela-e0b96.firebaseapp.com",
-    // projectId: "wasela-e0b96",
-    // storageBucket: "wasela-e0b96.appspot.com",
-    // messagingSenderId: "672793353236",
-    // appId: "1:672793353236:web:460f4fe376034fec549b01",
-    // measurementId: "G-G0VMYZFCE3"
-    apiKey: "AIzaSyC6rK9cyopGDxfdB7q76LEEr7YTaJAHwus",
-    authDomain: "angular-project-9c527.firebaseapp.com",
-    projectId: "angular-project-9c527",
-    storageBucket: "angular-project-9c527.appspot.com",
-    messagingSenderId: "92184956001",
-    appId: "1:92184956001:web:f22da32bb2904a8fea2e20",
-    measurementId: "G-MQL05L7P4E"
+    apiKey: "AIzaSyAfg2gVY1Ky2Z0Wgj6cuHTX5hz1zvZUnkA",
+    authDomain: "wasela-e0b96.firebaseapp.com",
+    projectId: "wasela-e0b96",
+    storageBucket: "wasela-e0b96.appspot.com",
+    messagingSenderId: "672793353236",
+    appId: "1:672793353236:web:460f4fe376034fec549b01",
+    measurementId: "G-G0VMYZFCE3"
     
+
   }
 };
 
