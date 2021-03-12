@@ -3,6 +3,8 @@ import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Login } from '../../ViewModels/Login/login';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { AngularFireAuth } from '@angular/fire/auth';
+import * as firebase from 'firebase/app';
 
 @Injectable({
   providedIn: 'root'
@@ -47,5 +49,16 @@ export class LoginService {
     
   return this.http.post<any>(`${environment.URL}/users`,prd, httpOptions);
 }
+
+doLogin(value : any){
+  return new Promise<any>((resolve, reject) => {
+    firebase.default.app().auth().signInWithEmailAndPassword(value.email, value.password)
+    .then((res: any) => {
+      resolve(res);
+    }, (err: any) => reject(err))
+  })
+}
+
+
 }
 

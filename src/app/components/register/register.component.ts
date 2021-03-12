@@ -28,6 +28,13 @@ export class RegisterComponent implements OnInit {
         
         err => {console.log(err); }
       );
+
+      this.userRegisterserve.doRegister(this.NewUser)
+      .then(res => {
+        console.log(res);
+      }, err => {
+        console.log(err);
+      })
   }
   login(){
     // alert("In Login")

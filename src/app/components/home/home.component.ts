@@ -4,6 +4,7 @@ import { TranslateService } from '@ngx-translate/core';
 import * as AOS from 'aos';
 
 @Component({
+  
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
@@ -27,6 +28,7 @@ export class HomeComponent implements OnInit {
       createOrder : (data:any, action:any)=>{
         return action.order.create({
           purchase_units: [{
+            
             amount: {
               value: '9.99',
               currency_code:'USD',
