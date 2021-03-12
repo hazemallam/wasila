@@ -36,9 +36,9 @@ export class MotionGraphicComponent implements OnInit {
    
     AOS.init();
   }
-  addToCart(image:string, name:string){
+  addToCart(id:number, image:string, name:string){
     let email = localStorage.getItem('UserToken')
-  this.cart = {name:name, userEmail:email as string, image:image}
+  this.cart = {courseId:id, name:name, userEmail:email as string, image:image}
   this.userCart.postToCart(this.cart);
   }
   auth():boolean{

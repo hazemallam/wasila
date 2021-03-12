@@ -47,7 +47,7 @@ export class MiniCoursesComponent implements OnInit {
 
  addToCart(id:number, name:string, image:string){
    let email = localStorage.getItem('UserToken')
-  this.cart = {name:name, userEmail:email as string, image:image}
+  this.cart = {courseId:id, name:name, userEmail:email as string, image:image}
   this.addCart.postToCart(this.cart);
  }
 

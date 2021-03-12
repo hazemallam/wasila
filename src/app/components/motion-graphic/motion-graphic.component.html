@@ -50,7 +50,7 @@
                     {{"motionGraphic.motionOverview" | translate}} .
                 </p>
                 <button *ngIf="!auth()" class="btn-num2"><a routerLink="/register">{{"conceptArt.conceptsets" | translate}}</a></button>
-                <button *ngIf="auth()" class="btn-num2"><a routerLink="/userprofile" (click)="addToCart('../../../assets/imgs/58.jpg', 'الموشن جرافيك')">{{"conceptArt.conceptadd" | translate}}</a></button>
+                <button *ngIf="auth()" class="btn-num2"><a routerLink="/userprofile" (click)="addToCart(1000, '../../../assets/imgs/58.jpg', 'الموشن جرافيك')">{{"conceptArt.conceptadd" | translate}}</a></button>
                 <p>{{"conceptArt.conceptStart" | translate}} <span>{{"motionGraphic.motionDate" | translate}}</span></p>
             </div>
             <div class="col-lg-6 video">

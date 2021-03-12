@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import * as AOS from 'aos';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',

@@ -36,7 +36,6 @@ import {NgxPayPalModule} from 'ngx-paypal';
 import { NgxSpinnerModule} from 'ngx-spinner';
 import { UserProfileComponent } from './Components/user-profile/user-profile.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
