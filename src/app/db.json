@@ -907,20 +907,6 @@
       "userEmail": "gmnk@jj.com",
       "image": "../../../assets/imgs/miniCourses/2.jpg",
       "id": 1
-    },
-    {
-      "courseId": 1000,
-      "name": "الموشن جرافيك",
-      "userEmail": "gmnk@jj.com",
-      "image": "../../../assets/imgs/58.jpg",
-      "id": 2
-    },
-    {
-      "courseId": 1001,
-      "name": "ُكونسبت ارت",
-      "userEmail": "gmnk@jj.com",
-      "image": "../../../assets/imgs/56.jpg",
-      "id": 3
     }
   ]
 }

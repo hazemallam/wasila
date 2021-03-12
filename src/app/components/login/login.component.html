@@ -29,9 +29,8 @@
                         class="rounded-input"  name="Password" id="prdName"  placeholder="" >
                     </div>                        
                 </span>
-                <div class="row">
+                <div class="row" style="justify-content: center;">
                     <button class="col-lg-6 login-btn" type="submit" [disabled]="frm.invalid">{{"login.log" | translate}}</button>
-                    <div class="col-lg-6 login-forget">{{"login.forget" | translate}}<a href="#"></a></div>
                 </div>
                 <div class="no-account">
                     <a routerLink="/register">{{"login.new-accounr" | translate}}</a>
