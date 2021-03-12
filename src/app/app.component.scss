@@ -51,4 +51,10 @@
     box-shadow: 0 4px 17px 3px rgba(72, 31, 210, 0.3);
     border: 3px solid;
     border-color: #9376f7;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.user-avatar:hover {
+    opacity: 0.8;
 }

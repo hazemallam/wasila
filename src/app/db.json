@@ -907,6 +907,13 @@
       "userEmail": "gmnk@jj.com",
       "image": "../../../assets/imgs/miniCourses/2.jpg",
       "id": 1
+    },
+    {
+      "courseId": 1002,
+      "name": "الجرافيك ديزاين",
+      "userEmail": "hazem@gmail.com",
+      "image": "../../../assets/imgs/55.jpg",
+      "id": 2
     }
   ]
 }
