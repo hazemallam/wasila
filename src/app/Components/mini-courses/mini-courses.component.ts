@@ -10,7 +10,7 @@ import { Icart } from 'src/app/ViewModels/icart';
   selector: 'app-mini-courses',
   templateUrl: './mini-courses.component.html',
   styleUrls: ['./mini-courses.component.scss']
-})
+}) 
 export class MiniCoursesComponent implements OnInit {
 
   miniCourses : Minicourse[] = []

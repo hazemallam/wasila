@@ -35,6 +35,10 @@ import { EventsModuleModule } from './Components/events-module/events-module.mod
 import {NgxPayPalModule} from 'ngx-paypal';
 import { NgxSpinnerModule} from 'ngx-spinner';
 import { UserProfileComponent } from './Components/user-profile/user-profile.component';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -79,7 +83,10 @@ import { UserProfileComponent } from './Components/user-profile/user-profile.com
     NgxAudioPlayerModule,
     NgxPaginationModule,
     NgxPayPalModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireAuthModule, 
   ],
   providers: [],
   bootstrap: [AppComponent]

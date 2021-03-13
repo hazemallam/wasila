@@ -19,11 +19,14 @@ export class LoginComponent implements OnInit {
   loginFrm: FormGroup = new FormGroup({});
   NewUser:Register;
 
+  
+
   constructor(private prdService: RegisterService , private loginService : LoginService,private fb: FormBuilder
     , private router:Router ) { 
       this.NewUser={name:"", email:"",password:""}
     }
 
+    
 
   ngOnInit(): void {
     this.subscribtion= this.prdService.getAllUserRegister().subscribe(
@@ -73,12 +76,26 @@ export class LoginComponent implements OnInit {
       ++x;
 
       }
+
+      this.loginService.doLogin(this.NewUser)
+      .then(res => {
+        console.log(res);
+        this.router.navigate(['/home']);
+        this.login();
+      }, err => {
+        console.log(err);
+      })
       
   }
+
+  
   if(count == 2)
          alert("من فضلك لا يوجد لديك حساب . سجل الان ");
 
     }
+
+    
+
 
     login(){
       // alert("In Login")

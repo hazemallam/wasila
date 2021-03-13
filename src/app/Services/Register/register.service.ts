@@ -3,13 +3,16 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Register } from "src/app/ViewModels/Register/register";
-
+import { AngularFireAuth } from '@angular/fire/auth';
+import * as firebase from 'firebase/app';
+  
 
 @Injectable({
   providedIn: 'root'
 })
 export class RegisterService {
-  constructor(private http: HttpClient) { 
+  constructor(private http: HttpClient,
+    public afAuth: AngularFireAuth) { 
     
   }
   getAllUserRegister(): Observable <Register[]>
@@ -49,5 +52,14 @@ isLogged(): boolean {
       })};
     
   return this.http.post<any>(`${environment.URL}/users`,prd, httpOptions);
+}
+
+doRegister(value : any){
+  return new Promise<any>((resolve, reject) => {
+    firebase.default.app().auth().createUserWithEmailAndPassword(value.email, value.password)
+    .then((res: any) => {
+      resolve(res);
+    }, (err: any) => reject(err))
+  })
 }
 }
