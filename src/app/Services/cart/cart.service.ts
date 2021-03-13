@@ -12,10 +12,10 @@ export class CartService {
   cart:Icart[] = []
   constructor(private http: HttpClient, private router: Router) { }
   postToCart(course: Icart){
-    this.http.get<Icart>(`${environment.URL}/carts?courseId=${course.courseId}`).subscribe((response)=>{
+    this.http.get<Icart[]>(`${environment.URL}/carts/?courseId=${course.courseId}&userEmail=${course.userEmail}`).subscribe((response)=>{
       console.log(response)
       if(response.length != 0){
-        alert("لقد تم اضافة هذه الدورة الى ال")
+        alert("لقد تم اضافة هذه الدورة الى السلة")
       }
       else{
         this.http.post<Icart>(`${environment.URL}/carts`, course).subscribe((response)=>{

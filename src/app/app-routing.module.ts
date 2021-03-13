@@ -21,11 +21,12 @@ import {ArticleComponent} from './Components/article/article.component'
 import {MiniCoursesComponent} from './Components/mini-courses/mini-courses.component'
 import { AuthGuard } from './guards/auth.guard';
 import { UserProfileComponent } from './Components/user-profile/user-profile.component';
+import { ProfileGuard } from './guards/profile.guard';
 
 
 const routes: Routes = [
   {path:'events', loadChildren: () => import('./Components/events-module/events-module.module').then(m => m.EventsModuleModule)},
-  {path: 'register', component: RegisterComponent},
+  {path: 'register', component: RegisterComponent, canActivate:[AuthGuard]},
   {path: 'privacy', component: PrivacyComponent},
   {path: 'contact', component: ContactUsComponent},
   {path: 'courses', component: CoursesComponent},
@@ -43,7 +44,7 @@ const routes: Routes = [
   {path:'admin', component:NotFoundComponent, canActivate:[AdminGuard]},
   {path : 'article', component: ArticleComponent},
   {path : 'minicourses', component: MiniCoursesComponent},
-  {path: 'userprofile', component: UserProfileComponent},
+  {path: 'userprofile', component: UserProfileComponent, canActivate:[ProfileGuard]},
   {path:'', redirectTo:'/home', pathMatch:'full'}
 
 ]
