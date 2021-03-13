@@ -957,20 +957,6 @@
       "id": 1
     },
     {
-      "courseId": 1002,
-      "name": "الجرافيك ديزاين",
-      "userEmail": "hazem@gmail.com",
-      "image": "../../../assets/imgs/55.jpg",
-      "id": 2
-    },
-    {
-      "courseId": 1001,
-      "name": "ُكونسبت ارت",
-      "userEmail": "gmnk@jj.com",
-      "image": "../../../assets/imgs/56.jpg",
-      "id": 3
-    },
-    {
       "courseId": 1,
       "name": "The Complete 2021 Web Development Bootcamp",
       "userEmail": "marcmagedbaky@hotmail.com",
@@ -983,13 +969,6 @@
       "userEmail": "marcmagedbaky@hotmail.com",
       "image": "../../../assets/imgs/miniCourses/3.jpg",
       "id": 5
-    },
-    {
-      "courseId": 1003,
-      "name": "ُثرى دى ارت",
-      "userEmail": "marcmagedbaky@hotmail.com",
-      "image": "../../../assets/imgs/57.jpg",
-      "id": 6
     }
   ]
 }
