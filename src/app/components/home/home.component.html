@@ -18,13 +18,13 @@
                 <a class="nav-links" routerLink="/videores">{{"Navbar.Resources" | translate}}</a>
             </li>
             <li>
-                <a class="nav-links" routerLink="/events/allevents">{{"Navbar.Events" | translate}}</a>
-            </li>
-            <li>
                 <a class="nav-links" routerLink="/alumni">{{"Navbar.Alumni" | translate}}</a>
             </li>
             <li>
                 <a class="nav-links" routerLink="/blog">{{"Navbar.blog" | translate}}</a>
+            </li>
+            <li>
+                <a class="nav-links" routerLink="/questions">{{"Footer.questions" | translate}}</a>
             </li>
             <li *ngIf="!auth()">
                 <a  class="nav-links nav-links-btn" routerLink="/login">{{"Navbar.Log" | translate}}</a>
@@ -209,8 +209,6 @@
                             <span style="margin-left: 15px;">{{"Home.blogger" | translate}}</span>
                             <span class="text-muted">15 Nov 2020</span>
 
-                            <span class="text-muted" style="float: left;margin-right: 15px;margin-top: 5px;">223 <img src="../../../assets/imgs/heart.png" alt="" style="width: 20px;"></span>
-                            <span class="text-muted" style="float: left;margin-top: 5px;">34  <img src="../../../assets/imgs/comment.png" alt=""  style="width: 20px;"></span>
                         </div>
                         <p class="card-text">{{"Home.article-title" | translate}} .</p>
                         </div>
@@ -227,9 +225,6 @@
                             <img src="../../../assets/imgs/alumni/8.jpg" alt="">
                             <span style="margin-left: 15px;">{{"Home.blogger" | translate}}</span>
                             <span class="text-muted">15 Nov 2020</span>
-
-                            <span class="text-muted" style="float: left;margin-right: 15px;margin-top: 5px;">223 <img src="../../../assets/imgs/heart.png" alt="" style="width: 20px;"></span>
-                            <span class="text-muted" style="float: left;margin-top: 5px;">34  <img src="../../../assets/imgs/comment.png" alt=""  style="width: 20px;"></span>
                         </div>
                         <p class="card-text">{{"Home.article-title" | translate}} .</p>
                         </div>
@@ -277,15 +272,10 @@
             </div>
             <div class="col-sm-4 col-md-3 col-lg-3">
                 <span>{{"Footer.payment" | translate}}</span>
-                <ul class="img-list" id="payment" #payPalRef>
-                    <!-- <li><img src="../../../assets/imgs/paypal.svg" alt=""></li>
-                    <li><img src="../../../assets/imgs/visa.svg" alt=""></li>
-                    <li><img src="../../../assets/imgs/mastercard.svg" alt=""></li> -->
-                    <br>
-                    <script>
-                        paypal.Buttons().render('#payment');
-                        // This function displays Smart Payment Buttons on your web page.
-                    </script>
+                <ul class="img-list">
+                    <li style="padding-left: 5px;"><img src="../../../assets/imgs/paypal.svg" alt=""></li>
+                    <li style="padding-left: 5px;"><img src="../../../assets/imgs/visa.svg" alt=""></li>
+                    <li style="padding-left: 5px;"><img src="../../../assets/imgs/mastercard.svg" alt=""></li>
                 </ul> 
                 <a href="#">{{"Footer.payment2" | translate}}</a>                   
             </div>

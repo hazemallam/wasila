@@ -18,13 +18,13 @@
                 <a class="nav-links" routerLink="/videores">{{"Navbar.Resources" | translate}}</a>
             </li>
             <li>
-                <a class="nav-links" routerLink="/events/allevents">{{"Navbar.Events" | translate}}</a>
-            </li>
-            <li>
                 <a class="nav-links" routerLink="/alumni">{{"Navbar.Alumni" | translate}}</a>
             </li>
             <li>
                 <a class="nav-links" routerLink="/blog">{{"Navbar.blog" | translate}}</a>
+            </li>
+            <li>
+                <a class="nav-links" routerLink="/questions">{{"Footer.questions" | translate}}</a>
             </li>
             <li *ngIf="!auth()">
                 <a class="nav-links nav-links-btn" routerLink="/login">{{"Navbar.Log" | translate}}</a>
@@ -55,7 +55,12 @@
     </div>
 </div>
 
-
+<div class="container" id="payment" #payPalRef>
+    <script>
+        paypal.Buttons().render('#payment');
+        // This function displays Smart Payment Buttons on your web page.
+    </script>
+</div>
 <div class="footer">
     <div class="container">
         <div class="row first-footer">
@@ -83,9 +88,9 @@
             <div class="col-sm-4 col-md-3 col-lg-3">
                 <span>{{"Footer.payment" | translate}}</span>
                 <ul class="img-list">
-                    <li><img src="../../../assets/imgs/paypal.svg" alt=""></li>
-                    <li><img src="../../../assets/imgs/visa.svg" alt=""></li>
-                    <li><img src="../../../assets/imgs/mastercard.svg" alt=""></li>
+                    <li style="padding-left: 5px;"><img src="../../../assets/imgs/paypal.svg" alt=""></li>
+                    <li style="padding-left: 5px;"><img src="../../../assets/imgs/visa.svg" alt=""></li>
+                    <li style="padding-left: 5px;"><img src="../../../assets/imgs/mastercard.svg" alt=""></li>
                 </ul> 
                 <a href="#">{{"Footer.payment2" | translate}}</a>                   
             </div>

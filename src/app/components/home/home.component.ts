@@ -14,37 +14,9 @@ export class HomeComponent implements OnInit {
   // paypal:any;
   constructor(public translate: TranslateService, private router: Router) { }
  
-  @ViewChild('payPalRef', {static : true}) private payPalRef? : ElementRef;
   ngOnInit(): void {
     // console.log(window.paypal)
-    window.paypal.Buttons({
-      style:{ 
-        layout:'horizontal',
-        color:'blue',
-        label:'paypal',
-        shape:'pill',
-        size:'responsive',
-        tagline:'false'
-      },
-      createOrder : (data:any, action:any)=>{
-        return action.order.create({
-          purchase_units: [{
-            
-            amount: {
-              value: '9.99',
-              currency_code:'USD',
-            }
-          }]
-        })
-      },
-      onApprove: function(data:any, actions:any) {
-        return actions.order.capture().then(function(details:any) {
-          alert('Transaction completed by ' + details.payer.name.given_name);
-        });
-      }
-
-    }).render(this.payPalRef?.nativeElement) 
-    
+   
     const menu = document.querySelector('#mobile-menu');
     const menuLinks = document.querySelector('.nav-menu');
     if(menu && menuLinks){

@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { CartService } from 'src/app/Services/cart/cart.service';
@@ -13,15 +13,44 @@ export class UserProfileComponent implements OnInit{
   carts:Icart[] = []
   cartsLoaded$?:Promise<boolean>;
   render:boolean = false
+  @ViewChild('payPalRef', {static : true}) private payPalRef? : ElementRef;
   constructor(private router: Router, private userCart: CartService, private translate : TranslateService) {
     this.cartsLoaded$ = Promise.resolve(false);
 
    }
-  
+   
   
   
 
   ngOnInit() {
+    window.paypal.Buttons({ 
+      style:{ 
+        layout:'horizontal',
+        color:'blue',
+        label:'paypal',
+        shape:'pill',
+        size:'responsive',
+        tagline:'false'
+      },
+      createOrder : (data:any, action:any)=>{
+        return action.order.create({
+          purchase_units: [{
+            
+            amount: {
+              value: '9.99',
+              currency_code:'USD',
+            }
+          }]
+        })
+      },
+      onApprove: function(data:any, actions:any) {
+        return actions.order.capture().then(function(details:any) {
+          alert('Transaction completed by ' + details.payer.name.given_name);
+        });
+      }
+
+    }).render(this.payPalRef?.nativeElement) 
+    
     const menu = document.querySelector('#mobile-menu');
     const menuLinks = document.querySelector('.nav-menu');
     if(menu && menuLinks){

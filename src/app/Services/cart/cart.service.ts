@@ -15,7 +15,7 @@ export class CartService {
     this.http.get<Icart>(`${environment.URL}/carts?courseId=${course.courseId}`).subscribe((response)=>{
       console.log(response)
       if(response.length != 0){
-        alert("Already added to cart")
+        alert("لقد تم اضافة هذه الدورة الى ال")
       }
       else{
         this.http.post<Icart>(`${environment.URL}/carts`, course).subscribe((response)=>{
