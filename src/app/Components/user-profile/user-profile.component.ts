@@ -3,9 +3,10 @@ import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { CartService } from 'src/app/Services/cart/cart.service';
 import { Icart } from 'src/app/ViewModels/icart';
-declare var paypal:any ;
+
 import { Title } from '@angular/platform-browser';
 
+declare var paypal:any ;
 @Component({
   selector: 'app-user-profile',
   templateUrl: './user-profile.component.html',
@@ -88,8 +89,8 @@ export class UserProfileComponent implements OnInit{
       // console.log(this.carts)
     })
   }
-  removeFromCart(id:number){
-    this.userCart.removeCart(id);
+  removeFromCart(id:number | undefined){
+    this.userCart.removeCart(id as number);
   }
   filterData(){
     this.userCart.getAllCart().subscribe((response)=>{
