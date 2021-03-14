@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { CartService } from 'src/app/Services/cart/cart.service';
 import { Icart } from 'src/app/ViewModels/icart';
+declare var paypal:any ;
 
 @Component({
   selector: 'app-user-profile',
@@ -23,7 +24,7 @@ export class UserProfileComponent implements OnInit{
   
 
   ngOnInit() {
-    window.paypal.Buttons({ 
+    paypal.Buttons({ 
       style:{ 
         layout:'horizontal',
         color:'blue',
