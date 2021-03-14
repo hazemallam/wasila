@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import * as AOS from 'aos';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-privacy',
@@ -9,9 +10,11 @@ import * as AOS from 'aos';
 })
 export class PrivacyComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,private titleService: Title) { }
 
   ngOnInit(): void {
+
+    this.titleService.setTitle('سياسة الخصوصية');
 
     setTimeout(() => {
       this.router.navigate(['/privacy'])

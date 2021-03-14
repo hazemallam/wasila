@@ -3,6 +3,7 @@ import { AlumniModel } from 'src/app/ViewModels/alumni-model';
 import { AlumniService } from 'src/app/Services/alumni.service';
 import { Subscription } from 'rxjs';
 import { Router } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 import * as AOS from 'aos';
 
 
@@ -16,10 +17,11 @@ export class AlumniComponent implements OnInit {
   subscribtion: Subscription| null =null;
 
   constructor(private alumService: AlumniService
-     , private router: Router) { }
+     , private router: Router, private titleService: Title) { }
 
   ngOnInit(): void {
 
+    this.titleService.setTitle('الخريجون');
     
     setTimeout(() => {
       this.router.navigate(['/alumni'])

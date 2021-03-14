@@ -848,6 +848,12 @@
       "name": "Hazem Allam",
       "userName": "allam",
       "password": "123456789"
+    },
+    {
+      "id": 2,
+      "userName": "amr17",
+      "name": "Amr Hesham",
+      "password": "123456789"
     }
   ],
   "users": [
@@ -946,6 +952,18 @@
       "email": "bibobibo@gmail.com",
       "password": "dodododo",
       "id": 16
+    },
+    {
+      "name": "amira",
+      "email": "amiraabdelhady885@gmail.com",
+      "password": "123456789",
+      "id": 17
+    },
+    {
+      "name": "amrhesham",
+      "email": "amrhesham1777@gmail.com",
+      "password": "123456789",
+      "id": 18
     }
   ],
   "carts": [
@@ -978,13 +996,6 @@
       "id": 6
     },
     {
-      "courseId": 6,
-      "name": "The Complete JavaScript Course 2021: From Zero to Expert!",
-      "userEmail": "gmnk@jj.com",
-      "image": "../../../assets/imgs/miniCourses/6.jpg",
-      "id": 7
-    },
-    {
       "courseId": 1,
       "name": "The Complete 2021 Web Development Bootcamp",
       "userEmail": "gmnk@jj.com",
@@ -999,18 +1010,18 @@
       "id": 9
     },
     {
-      "courseId": 7,
-      "name": "Microsoft Excel - Excel from Beginner to Advanced",
-      "userEmail": "gmnk@jj.com",
-      "image": "../../../assets/imgs/miniCourses/7.jpg",
-      "id": 10
-    },
-    {
       "courseId": 4,
       "name": "Ultimate AWS Certified Solutions Architect Associate 2021",
       "userEmail": "marcmagedbaky@hotmail.com",
       "image": "../../../assets/imgs/miniCourses/4.jpg",
       "id": 11
+    },
+    {
+      "courseId": 1,
+      "name": "The Complete 2021 Web Development Bootcamp",
+      "userEmail": "amrhesham1777@gmail.com",
+      "image": "../../../assets/imgs/miniCourses/1.jpg",
+      "id": 12
     }
   ]
 }

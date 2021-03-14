@@ -5,6 +5,7 @@ import * as AOS from 'aos';
 import { Router } from '@angular/router';
 import { CartService } from 'src/app/Services/cart/cart.service';
 import { Icart } from 'src/app/ViewModels/icart';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-graphic-design',
@@ -15,9 +16,11 @@ export class GraphicDesignComponent implements OnInit {
 
   courses:Icourses[]=[]
   cart:Icart = {};
-  constructor(private coursesService: CoursesService, private userCart: CartService, private router: Router) {}
+  constructor(private coursesService: CoursesService, private userCart: CartService, private router: Router,private titleService: Title) {}
 
   ngOnInit(): void {
+
+    this.titleService.setTitle('دورة الجرافيك ديزاين');
 
     setTimeout(() => {
       this.router.navigate(['/graphic'])

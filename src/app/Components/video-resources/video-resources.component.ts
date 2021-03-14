@@ -5,6 +5,7 @@ import { Subscription } from 'rxjs';
 import { VideoResourcesServiceService } from 'src/app/Services/VideoResources/video-resources-service.service';
 import { VideoResourcesAlbumsInterface, VideoResourcesInterface } from 'src/app/ViewModels/VideoResources/video-resources-interface';
 import * as AOS from 'aos';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-video-resources',
@@ -17,12 +18,13 @@ export class VideoResourcesComponent implements OnInit{
   subscription : Subscription | null = null;
 
   
-  constructor( private video : VideoResourcesServiceService, private router :Router) { }
+  constructor( private video : VideoResourcesServiceService, private router :Router,private titleService: Title) { }
 
 
   ngOnInit(): void {
 
-    
+    this.titleService.setTitle('المصادر المجانية');
+
     setTimeout(() => {
       this.router.navigate(['/videores'])
     }, 300);

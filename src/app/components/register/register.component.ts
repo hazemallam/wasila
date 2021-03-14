@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import {RegisterService } from 'src/app/Services/Register/register.service';
 import { Register } from 'src/app/ViewModels/Register/register';
 import * as AOS from 'aos';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-register',
@@ -11,9 +12,11 @@ import * as AOS from 'aos';
 })
 export class RegisterComponent implements OnInit {
   NewUser:Register;
-  constructor(private router: Router , private userRegisterserve:RegisterService ) { 
+  constructor(private router: Router , private userRegisterserve:RegisterService,private titleService: Title ) { 
     this.NewUser={name:"", email:"",password:""} }
   ngOnInit(): void {
+    this.titleService.setTitle('تسجيل - إنشاء حساب');
+
     AOS.init();
   }
   
@@ -38,7 +41,7 @@ export class RegisterComponent implements OnInit {
   }
   login(){
     // alert("In Login")
-    this.userRegisterserve.login('TestToken');
+    this.userRegisterserve.login(this.NewUser.email); 
     // this.userloginserve.login(this.NewUser.Email)
   }
 

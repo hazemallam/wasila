@@ -3,6 +3,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { EventServiceService } from 'src/app/Services/Events/event-service.service';
 import { IEvent } from 'src/app/ViewModels/ievent';
 import * as AOS from 'aos';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-events',
@@ -11,9 +12,11 @@ import * as AOS from 'aos';
 })
 export class EventsComponent implements OnInit {
   events:IEvent[] = []
-  constructor(private eventService : EventServiceService, private translate: TranslateService) { }
+  constructor(private eventService : EventServiceService, private translate: TranslateService,private titleService: Title) { }
 
   ngOnInit(): void {
+    this.titleService.setTitle('الفعاليات');
+
     const menu = document.querySelector('#mobile-menu');
     const menuLinks = document.querySelector('.nav-menu');
     if(menu && menuLinks){
