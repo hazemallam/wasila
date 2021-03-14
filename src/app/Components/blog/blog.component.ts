@@ -4,6 +4,7 @@ import { BlogServiceService } from 'src/app/Services/Blog/blog-service.service';
 import { BlogInterface, CommentsInterface, CoursesInterface } from 'src/app/ViewModels/blog/blog-interface';
 import * as AOS from 'aos';
 import { Router } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-blog',
@@ -22,9 +23,12 @@ export class BlogComponent implements OnInit {
   constructor(private blog : BlogServiceService,
     private course : BlogServiceService,
     private comment : BlogServiceService,
-    private router: Router) { }
+    private router: Router,
+    private titleService: Title) { }
 
   ngOnInit(): void {
+
+    this.titleService.setTitle('المدونة');
 
     setTimeout(() => {
       this.router.navigate(['/blog'])

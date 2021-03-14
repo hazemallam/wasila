@@ -6,6 +6,7 @@ import { LoginService } from 'src/app/Services/Login/login.service';
 import { RegisterService } from 'src/app/Services/Register/register.service';
 import { Register } from "src/app/ViewModels/Register/register";
 import * as AOS from 'aos';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-login',
@@ -21,10 +22,12 @@ export class LoginComponent implements OnInit {
   xx = false;
   users : any
   constructor(private prdService: RegisterService , private loginService : LoginService,private fb: FormBuilder
-    , private router:Router ) { 
+    , private router:Router,private titleService: Title ) { 
       this.NewUser={name:"", email:"",password:""}
     }
   ngOnInit(): void {
+    this.titleService.setTitle('تسجيل الدخول');
+
     this.subscribtion= this.prdService.getAllUserRegister().subscribe(
       (response)=>{
         this.usersList=response;

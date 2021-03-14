@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import * as AOS from 'aos';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-contact-us',
@@ -9,9 +10,11 @@ import * as AOS from 'aos';
 })
 export class ContactUsComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,private titleService: Title) { }
 
   ngOnInit(): void {
+
+    this.titleService.setTitle('تواصل معنا');
 
     setTimeout(() => {
       this.router.navigate(['/contact'])

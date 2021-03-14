@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import * as AOS from 'aos';
 import { CartService } from 'src/app/Services/cart/cart.service';
 import { Icart } from 'src/app/ViewModels/icart';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-concept-art',
@@ -11,9 +12,12 @@ import { Icart } from 'src/app/ViewModels/icart';
 })
 export class ConceptArtComponent implements OnInit {
   cart:Icart = {};
-  constructor(private userCart: CartService, private router:Router) { }
+  constructor(private userCart: CartService, private router:Router,
+    private titleService: Title) { }
 
   ngOnInit(): void {
+
+    this.titleService.setTitle('دورة الكونسبت أرت');
 
     setTimeout(() => {
       this.router.navigate(['/concept'])
@@ -41,6 +45,12 @@ export class ConceptArtComponent implements OnInit {
     let email = localStorage.getItem('UserToken')
   this.cart = {courseId:id, name:name, userEmail:email as string, image:image}
   this.userCart.postToCart(this.cart);
+  }
+
+  addToCartFromEasyCash(id:number, image:string, name:string){
+    let email = localStorage.getItem('UserToken')
+    this.cart = {courseId:id, name:name, userEmail:email as string, image:image}
+    this.userCart.postToEasyCash(this.cart);
   }
   auth():boolean{
     let value =  localStorage.getItem('UserToken')? true :false;

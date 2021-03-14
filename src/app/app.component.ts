@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 import { TranslateService } from '@ngx-translate/core';
 
 import { NgxSpinnerService } from 'ngx-spinner';
@@ -13,7 +14,8 @@ import { NgxSpinnerService } from 'ngx-spinner';
 export class AppComponent  implements OnInit{
   title = 'wasila-angular';
 
-  constructor(public translate: TranslateService, private router : Router, private spinnerService: NgxSpinnerService){
+  constructor(public translate: TranslateService, private router : Router, private spinnerService: NgxSpinnerService,
+    private titleService: Title){
 
   }
 
@@ -29,6 +31,8 @@ export class AppComponent  implements OnInit{
  }
 
  ngOnInit() {
+  this.titleService.setTitle('وسيلة أون لاين');
+  
   this.spinner();
   }
 

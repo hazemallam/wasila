@@ -30,6 +30,25 @@ export class CartService {
 
      
   }
+  postToEasyCash(course: Icart){
+    this.http.get<Icart[]>(`${environment.URL}/carts/?courseId=${course.courseId}&userEmail=${course.userEmail}`).subscribe((response)=>{
+      console.log(response)
+      if(response.length != 0){
+        alert("لقد تم اضافة هذه الدورة الى السلة")
+      }
+      else{
+        this.http.post<Icart>(`${environment.URL}/carts`, course).subscribe((response)=>{
+          console.log("successfully added to cart")
+          window.open('https://easykash.net/MAS2127','_self')
+        },(erro)=>{
+          console.log(erro)
+        });
+      }
+    })
+    // console.log(course)
+
+     
+  }
   getUserCart():Observable<Icart[]>{
      return this.http.get<Icart[]>(`${environment.URL}/carts?userEmail=${localStorage.getItem('UserToken')}`)
   }

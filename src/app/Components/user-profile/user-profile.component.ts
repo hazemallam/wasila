@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { CartService } from 'src/app/Services/cart/cart.service';
 import { Icart } from 'src/app/ViewModels/icart';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-user-profile',
@@ -14,7 +15,8 @@ export class UserProfileComponent implements OnInit{
   cartsLoaded$?:Promise<boolean>;
   render:boolean = false
   @ViewChild('payPalRef', {static : true}) private payPalRef? : ElementRef;
-  constructor(private router: Router, private userCart: CartService, private translate : TranslateService) {
+  constructor(private router: Router, private userCart: CartService, private translate : TranslateService,
+    private titleService: Title) {
     this.cartsLoaded$ = Promise.resolve(false);
 
    }
@@ -22,7 +24,10 @@ export class UserProfileComponent implements OnInit{
   
   
 
-  ngOnInit() {
+  ngOnInit() { 
+
+    this.titleService.setTitle('الحساب الشخصي');
+
     window.paypal.Buttons({ 
       style:{ 
         layout:'horizontal',

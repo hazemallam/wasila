@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import * as AOS from 'aos';
 import { CartService } from 'src/app/Services/cart/cart.service';
 import { Icart } from 'src/app/ViewModels/icart';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-motion-graphic',
@@ -11,9 +12,11 @@ import { Icart } from 'src/app/ViewModels/icart';
 })
 export class MotionGraphicComponent implements OnInit {
   cart:Icart = {};
-  constructor(private userCart: CartService, private router: Router) { }
+  constructor(private userCart: CartService, private router: Router,private titleService: Title) { }
 
   ngOnInit(): void {
+
+    this.titleService.setTitle('دورة الموشن جرافيك');
 
     setTimeout(() => {
       this.router.navigate(['/motion'])

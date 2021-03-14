@@ -5,6 +5,7 @@ import { Subscription } from 'rxjs';
 import * as AOS from 'aos';
 import { CartService } from 'src/app/Services/cart/cart.service';
 import { Icart } from 'src/app/ViewModels/icart';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-mini-courses',
@@ -18,9 +19,11 @@ export class MiniCoursesComponent implements OnInit {
   p: number = 1;
   cart:Icart = {};
 
-  constructor(private course : MiniCoursesService, private addCart: CartService) { }
+  constructor(private course : MiniCoursesService, private addCart: CartService,private titleService: Title) { }
 
   ngOnInit(): void {
+    this.titleService.setTitle('الدورات القصيرة');
+
     const menu = document.querySelector('#mobile-menu');
     const menuLinks = document.querySelector('.nav-menu');
     if(menu && menuLinks){

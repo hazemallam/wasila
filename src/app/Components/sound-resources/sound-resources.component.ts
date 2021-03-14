@@ -6,6 +6,7 @@ import { SoundResourcesServiceService } from 'src/app/Services/SoundResources/so
 import { SoundResourcesInterface } from 'src/app/ViewModels/SoundResources/sound-resources-interface';
 import { Track } from 'ngx-audio-player'; 
 import * as AOS from 'aos';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-sound-resources',
@@ -48,9 +49,11 @@ msaapPlaylist: Track[] = [
   subscription : Subscription | null = null;
   subscription2 : Subscription | null = null;
   constructor(private album : SoundResourcesServiceService,
-    private sound : SoundResourcesServiceService, private router : Router) { }
+    private sound : SoundResourcesServiceService, private router : Router,private titleService: Title) { }
 
   ngOnInit(): void {
+
+    this.titleService.setTitle('تسجيلات صوتية');
 
     setTimeout(() => {
       this.router.navigate(['/soundres'])
