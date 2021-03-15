@@ -45,6 +45,13 @@ export class ThreedArtComponent implements OnInit {
   this.cart = {courseId:id, name:name, userEmail:email as string, image:image}
   this.userCart.postToCart(this.cart);
   }
+
+  addToCartFromEasyCash(id:number, image:string, name:string){
+    let email = localStorage.getItem('UserToken')
+    this.cart = {courseId:id, name:name, userEmail:email as string, image:image}
+    this.userCart.postToEasyCash(this.cart);
+  }
+  
   auth():boolean{
     let value =  localStorage.getItem('UserToken')? true :false;
    return value;

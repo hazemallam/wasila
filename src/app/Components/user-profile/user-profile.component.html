@@ -35,7 +35,7 @@
 
 <div style="margin-top: 120px;" class="courses" > <!-- [cartsLoaded]="cartsLoaded$ | async"-->
     <div class="container">
-        <h1>قائمتك : </h1>
+        <h1>{{"user.list" | translate}}</h1>
         <br>
         <div class="row">
             <div class="col-md-2 col-lg-3 col-sm-6" *ngFor="let cor of carts">
@@ -45,7 +45,7 @@
                         <div class="card-body row">
                             <h5 class="card-title" style="margin-left: 20px;">{{cor.name}}</h5>
                             <br>
-                            <button class="add-to-cart" (click)="removeFromCart(cor.id)">إزالة من السلة -</button>
+                            <button class="add-to-cart" (click)="removeFromCart(cor.id)">{{"user.remove" | translate}}</button>
 
                         </div>
                     </div>

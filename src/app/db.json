@@ -1022,13 +1022,6 @@
       "userEmail": "amrhesham1777@gmail.com",
       "image": "../../../assets/imgs/miniCourses/1.jpg",
       "id": 12
-    },
-    {
-      "courseId": 6,
-      "name": "The Complete JavaScript Course 2021: From Zero to Expert!",
-      "userEmail": "gmnk@jj.com",
-      "image": "../../../assets/imgs/miniCourses/6.jpg",
-      "id": 13
     }
   ]
 }
