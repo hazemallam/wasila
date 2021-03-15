@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  URL: "http://localhost:3004",
+  URL: "https://wasila-db.herokuapp.com",
   firebase: {
     apiKey: "AIzaSyAfg2gVY1Ky2Z0Wgj6cuHTX5hz1zvZUnkA",
     authDomain: "wasela-e0b96.firebaseapp.com",

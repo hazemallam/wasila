@@ -41,6 +41,7 @@ export class ThreedArtComponent implements OnInit {
     
   }
   addToCart(id:number, image:string, name:string){
+    console.log(id,name, image)
     let email = localStorage.getItem('UserToken')
   this.cart = {courseId:id, name:name, userEmail:email as string, image:image}
   this.userCart.postToCart(this.cart);

@@ -54,6 +54,7 @@ export class CartService {
   }
   removeCart(id:number){
     this.http.delete(`${environment.URL}/carts/${id}`).subscribe((response)=>{
+      console.log(response)
       alert('removed successfully')
       window.location.reload()
     });
