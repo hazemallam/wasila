@@ -649,38 +649,45 @@
   ],
   "coursess": [
     {
+      "id": 1,
+      "image": "../../../assets/imgs/miniCourses/3.jpg",
+      "text1": "The Web Developer",
+      "text2": "Bootcamp 2021",
+      "time": "12:30"
+    },
+    {
       "id": 2,
-      "image": "../../../assets/imgs/blog/a-7.jpg",
-      "text1": "تمارين وملفات ",
-      "text2": "بس علام العمل لكل درس حازم al حسام حسن",
+      "image": "../../../assets/imgs/miniCourses/4.jpg",
+      "text1": "Ultimate AWS Certified Solutions ",
+      "text2": "Architect Associate 2021",
       "time": "11:30"
     },
     {
       "id": 3,
-      "image": "../../../assets/imgs/blog/a-8.jpg",
-      "text1": "محتوى نظري",
-      "text2": "على هيئة pdf",
+      "image": "../../../assets/imgs/miniCourses/5.jpg",
+      "text1": "Front End Web Development",
+      "text2": "Master Course for 2021",
       "time": "10:20"
     },
     {
       "id": 4,
-      "image": "../../../assets/imgs/blog/a-9.jpg",
-      "text1": "تمارين وملفات",
-      "text2": "العمل لكل درس",
+      "image": "../../../assets/imgs/miniCourses/11.jpg",
+      "text1": "Modern React with",
+      "text2": "Redux [2020 Update]",
       "time": "9:30"
     },
     {
       "id": 5,
-      "image": "../../../assets/imgs/blog/a-10.jpg",
-      "text1": "محتوى نظري",
-      "text2": "على هيئة pdf",
+      "image": "../../../assets/imgs/miniCourses/1.jpg",
+      "text1": "The Complete 2021",
+      "text2": "Web Development Bootcamp",
       "time": "10:30"
     },
     {
       "id": 6,
-      "image": "../../../assets/imgs/blog/a-5.jpg",
-      "text1": "وضح الصور و اضافة",
-      "text2": "تأثيرات صوتية",
+      "image": "../../../assets/imgs/miniCourses/12.jpg",
+      "text1": "Flutter & Dart - ",
+      "text2": "The Complete Guide [2021 Edition]",
       "time": "6:15"
     }
   ],
@@ -964,6 +971,12 @@
       "email": "amrhesham1777@gmail.com",
       "password": "123456789",
       "id": 18
+    },
+    {
+      "name": "hvvdk",
+      "email": "bibobibobibo@hotmail.com",
+      "password": "123456",
+      "id": 19
     }
   ],
   "carts": [

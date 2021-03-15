@@ -278,5 +278,13 @@
         "bookNow": "Reserve your seat for free",
         "colors": "Meanings of colors",
         "speakers": "Speakers"
+    },
+    "NotFound": {
+        "sorry": "Something is Wrong",
+        "notfound": "Page Not Found"
+    },
+    "user": {
+        "list": "Your list:",
+        "remove": "Remove from cart -"
     }
 }

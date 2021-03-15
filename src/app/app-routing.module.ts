@@ -45,7 +45,8 @@ const routes: Routes = [
   {path : 'article', component: ArticleComponent},
   {path : 'minicourses', component: MiniCoursesComponent},
   {path: 'userprofile', component: UserProfileComponent, canActivate:[ProfileGuard]},
-  {path:'', redirectTo:'/home', pathMatch:'full'}
+  {path:'', redirectTo:'/home', pathMatch:'full'},
+  {path: "**", component: NotFoundComponent}
 
 ]
 
