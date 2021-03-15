@@ -12,7 +12,7 @@ import { ThreedArtComponent } from './Components/threed-art/threed-art.component
 import { AlumniComponent } from './Components/alumni/alumni.component';
 import { HomeComponent } from './Components/home/home.component';
 import { BlogComponent } from './Components/blog/blog.component';
-import { QuestionsComponent } from './Components/questions/questions.component';
+// import { QuestionsComponent } from './Components/questions/questions.component';
 import { VideoResourcesComponent } from './Components/video-resources/video-resources.component';
 import { SoundResourcesComponent } from './Components/sound-resources/sound-resources.component';
 import { NotFoundComponent } from './Components/not-found/not-found.component';
@@ -38,7 +38,7 @@ const routes: Routes = [
   {path : 'alumni', component: AlumniComponent},
   {path : 'home', component: HomeComponent},
   {path: 'blog', component: BlogComponent},
-  {path: 'questions', component: QuestionsComponent},
+  // {path: 'questions', component: QuestionsComponent},
   {path : 'videores', component : VideoResourcesComponent},
   {path : 'soundres', component: SoundResourcesComponent},
   {path:'admin', component:NotFoundComponent, canActivate:[AdminGuard]},
