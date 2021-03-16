@@ -11,7 +11,7 @@ export class AdminGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
       // this.router.navigate(['/admin', {}])
-      window.open('https://wasila-db.herokuapp.com','_self')
+      window.open('https://wasila-dashboard.herokuapp.com/','_self')
     return false;
   }
   
