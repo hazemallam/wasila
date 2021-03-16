@@ -20,7 +20,7 @@ import { ThreedArtComponent } from './components/threed-art/threed-art.component
 import { AlumniComponent } from './components/alumni/alumni.component';
 import { HomeComponent } from './components/home/home.component';
 import { BlogComponent } from './components/blog/blog.component';
-import { QuestionsComponent } from './components/questions/questions.component';
+// import { QuestionsComponent } from './components/questions/questions.component';
 import { VideoResourcesComponent } from './components/video-resources/video-resources.component';
 import { SoundResourcesComponent } from './components/sound-resources/sound-resources.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
@@ -56,7 +56,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AlumniComponent,
     HomeComponent,
     BlogComponent,
-    QuestionsComponent,
+    // QuestionsComponent,
     VideoResourcesComponent,
     SoundResourcesComponent,
     NotFoundComponent,
