@@ -92,7 +92,7 @@ export class RegisterComponent implements OnInit {
   
   login(){
     // alert("In Login")
-    this.userRegisterserve.login('TestToken');
+    this.userRegisterserve.login(this.NewUser.email);
     // this.userloginserve.login(this.NewUser.Email)
   }
  
