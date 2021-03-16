@@ -5,36 +5,36 @@ import {NgxPaginationModule} from 'ngx-pagination';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RegisterComponent } from './Components/register/register.component';
+import { RegisterComponent } from './components/register/register.component';
 
-import { PrivacyComponent } from './Components/privacy/privacy.component';
-import { ContactUsComponent } from './Components/contact-us/contact-us.component';
-import { CoursesComponent } from './Components/courses/courses.component';
-import { MotionGraphicComponent } from './Components/motion-graphic/motion-graphic.component'
+import { PrivacyComponent } from './components/privacy/privacy.component';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { CoursesComponent } from './components/courses/courses.component';
+import { MotionGraphicComponent } from './components/motion-graphic/motion-graphic.component'
 
-import { ConceptArtComponent } from './Components/concept-art/concept-art.component';
-import { LoginComponent } from './Components/login/login.component';
+import { ConceptArtComponent } from './components/concept-art/concept-art.component';
+import { LoginComponent } from './components/login/login.component';
 
-import { GraphicDesignComponent } from './Components/graphic-design/graphic-design.component';
-import { ThreedArtComponent } from './Components/threed-art/threed-art.component';
-import { AlumniComponent } from './Components/alumni/alumni.component';
-import { HomeComponent } from './Components/home/home.component';
-import { BlogComponent } from './Components/blog/blog.component';
-// import { QuestionsComponent } from './Components/questions/questions.component';
-import { VideoResourcesComponent } from './Components/video-resources/video-resources.component';
-import { SoundResourcesComponent } from './Components/sound-resources/sound-resources.component';
+import { GraphicDesignComponent } from './components/graphic-design/graphic-design.component';
+import { ThreedArtComponent } from './components/threed-art/threed-art.component';
+import { AlumniComponent } from './components/alumni/alumni.component';
+import { HomeComponent } from './components/home/home.component';
+import { BlogComponent } from './components/blog/blog.component';
+import { QuestionsComponent } from './components/questions/questions.component';
+import { VideoResourcesComponent } from './components/video-resources/video-resources.component';
+import { SoundResourcesComponent } from './components/sound-resources/sound-resources.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NotFoundComponent } from './Components/not-found/not-found.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { NgxAudioPlayerModule } from 'ngx-audio-player';
-import { ArticleComponent } from './Components/article//article.component';
-import { MiniCoursesComponent } from './Components/mini-courses/mini-courses.component';
-import { EventsModuleModule } from './Components/events-module/events-module.module';
+import { ArticleComponent } from './components/article//article.component';
+import { MiniCoursesComponent } from './components/mini-courses/mini-courses.component';
+import { EventsModuleModule } from './components/events-module/events-module.module';
 import {NgxPayPalModule} from 'ngx-paypal';
 import { NgxSpinnerModule} from 'ngx-spinner';
-import { UserProfileComponent } from './Components/user-profile/user-profile.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
@@ -56,7 +56,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AlumniComponent,
     HomeComponent,
     BlogComponent,
-    // QuestionsComponent,
+    QuestionsComponent,
     VideoResourcesComponent,
     SoundResourcesComponent,
     NotFoundComponent,
