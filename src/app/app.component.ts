@@ -32,10 +32,18 @@ export class AppComponent  implements OnInit{
 
  ngOnInit() {
   this.titleService.setTitle('وسيلة أون لاين');
-  
   this.spinner();
   }
-
+  eng(){
+     localStorage.setItem('lang', 'en')
+     let lang : string = localStorage.getItem('lang') as string
+     this.translate.use(lang)
+  }
+  ar(){
+    localStorage.setItem('lang', 'ar')
+    let lang : string = localStorage.getItem('lang') as string
+    this.translate.use(lang)
+  }
   spinner(): void {
     this.spinnerService.show();
     setTimeout(() => {

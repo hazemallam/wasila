@@ -40,7 +40,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+let lang = localStorage.getItem('lang') as string
+let val = lang ? lang : 'ar' 
 @NgModule({
   declarations: [
     AppComponent,
@@ -73,7 +74,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     ReactiveFormsModule,
     TranslateModule.forRoot({
-      defaultLanguage: 'ar', 
+      defaultLanguage: val, 
       loader: {
         provide:TranslateLoader,
         useFactory:createTranslateLoader,
